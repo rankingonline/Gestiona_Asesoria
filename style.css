@@ -1046,7 +1046,7 @@ p {
     position: relative;
     overflow: hidden;
     /* Clips the giant logo so it doesn't break page layout */
-    background-color: var(--bg-alt);
+    background-color: #fff5ea;
     /* Ensure background color is consistent */
     z-index: 1;
 }
@@ -1095,11 +1095,14 @@ p {
     flex-direction: column;
     padding: 0;
     overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02), 0 10px 15px rgba(0, 0, 0, 0.03);
+    /* Soft initial shadow */
 }
 
 .card.error-card:hover {
     border-color: var(--primary);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), 0 10px 15px rgba(240, 90, 26, 0.05);
+    /* Deeper shadow with subtle primary tint */
     transform: translateY(-5px);
 }
 
