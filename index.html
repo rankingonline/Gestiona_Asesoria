@@ -384,54 +384,74 @@
           </h2>
         </div>
         <div class="cards-grid">
-          <div class="card error-card">
-            <div class="card-header">
-              <div class="card-icon-styled error">
-                <i data-lucide="alert-triangle"></i>
+          <!-- Error 1 -->
+          <div class="card error-card-new">
+            <h3>No entender la periodificación de gastos</h3>
+            <div class="comparison-container">
+              <div class="comp-item problem">
+                <div class="comp-icon red">
+                  <i data-lucide="x-circle"></i>
+                </div>
+                <p>Trabajos en curso sin registrar</p>
               </div>
-              <h3>No entender la periodificación de gastos</h3>
-            </div>
-            <div class="card-body">
-              <div class="problem-box">
-                <p class="problem"><strong>Problema:</strong> Trabajos en curso sin registrar.</p>
+
+              <div class="comp-arrow">
+                <i data-lucide="arrow-down"></i>
               </div>
-              <div class="consequence-box">
-                <p class="consequence"><strong>Consecuencia:</strong> Pagas más impuestos de los que deberías.</p>
+
+              <div class="comp-item result">
+                <div class="comp-icon orange">
+                  <i data-lucide="wallet-2"></i> <!-- Wallet implying money impact -->
+                </div>
+                <p>Pagas más impuestos de los que deberías</p>
               </div>
             </div>
           </div>
 
-          <div class="card error-card">
-            <div class="card-header">
-              <div class="card-icon-styled">
-                <i data-lucide="search-x"></i>
+          <!-- Error 2 -->
+          <div class="card error-card-new">
+            <h3>Asesoría que no conoce tu campaña</h3>
+            <div class="comparison-container">
+              <div class="comp-item problem">
+                <div class="comp-icon red">
+                  <i data-lucide="x-circle"></i>
+                </div>
+                <p>No entienden el ciclo de berries</p>
               </div>
-              <h3>Asesoría que no conoce tu campaña</h3>
-            </div>
-            <div class="card-body">
-              <div class="problem-box">
-                <p class="problem"><strong>Problema:</strong> No entienden el ciclo de berries.</p>
+
+              <div class="comp-arrow">
+                <i data-lucide="arrow-down"></i>
               </div>
-              <div class="consequence-box">
-                <p class="consequence"><strong>Consecuencia:</strong> Te aplican estrategias que no encajan contigo.</p>
+
+              <div class="comp-item result">
+                <div class="comp-icon orange">
+                  <i data-lucide="file-warning"></i>
+                </div>
+                <p>Te aplican estrategias que no encajan contigo</p>
               </div>
             </div>
           </div>
 
-          <div class="card error-card">
-            <div class="card-header">
-              <div class="card-icon-styled">
-                <i data-lucide="users"></i>
+          <!-- Error 3 -->
+          <div class="card error-card-new">
+            <h3>Falta de cercanía real</h3>
+            <div class="comparison-container">
+              <div class="comp-item problem">
+                <div class="comp-icon red">
+                  <i data-lucide="x-circle"></i>
+                </div>
+                <p>Solo tramitan documentos</p>
               </div>
-              <h3>Falta de cercanía real</h3>
-            </div>
-            <div class="card-body">
-              <div class="problem-box">
-                <p class="problem"><strong>Problema:</strong> Solo tramitan documentos.</p>
+
+              <div class="comp-arrow">
+                <i data-lucide="arrow-down"></i>
               </div>
-              <div class="consequence-box">
-                <p class="consequence"><strong>Consecuencia:</strong> Se pierden oportunidades de ahorro y
-                  planificación.</p>
+
+              <div class="comp-item result">
+                <div class="comp-icon orange">
+                  <i data-lucide="trending-down"></i>
+                </div>
+                <p>Se pierden oportunidades de ahorro y planificación</p>
               </div>
             </div>
           </div>
@@ -494,28 +514,7 @@
 
 
 
-    <!-- Testimonials -->
-    <section class="section testimonials-section">
-      <div class="container">
-        <div class="section-header text-center">
-          <p class="eyebrow">Google Reviews</p>
-          <h2>Lo que dicen nuestros <span class="highlight">agricultores</span></h2>
-        </div>
-        <div class="google-review-placeholder">
-          <!-- Placeholder for Google Reviews Widget -->
-          <div class="review-card">
-            <div class="stars">★★★★★</div>
-            <p>"Entienden perfectamente mis tiempos de cosecha y pago. He ahorrado mucho en impuestos."</p>
-            <div class="author">- Cliente Verificado</div>
-          </div>
-          <div class="review-card">
-            <div class="stars">★★★★★</div>
-            <p>"Siempre están ahí cuando surge un problema con los contratos de temporada."</p>
-            <div class="author">- Cliente Verificado</div>
-          </div>
-        </div>
-      </div>
-    </section>
+
 
     <!-- About Us -->
     <section id="about" class="section about-section dark-alt">
@@ -564,9 +563,62 @@
       </div>
     </section>
 
-    <footer>
+    <footer class="main-footer">
       <div class="container">
-        <p>&copy; 2025 Gestiona Asesoría. Todos los derechos reservados.</p>
+        <div class="footer-grid">
+          <!-- Brand Column -->
+          <div class="footer-col brand-col">
+            <div class="logo footer-logo highlight-logo">
+              <img src="images/gestiona-white-text.svg" alt="Gestiona Asesoría Logo" class="footer-logo-img">
+            </div>
+            <p class="footer-desc">Especialistas en el sector agroalimentario de Huelva. Tu tranquilidad fiscal y
+              laboral es nuestra cosecha.</p>
+            <div class="social-links">
+              <a href="#" class="social-link"><i data-lucide="linkedin"></i></a>
+              <a href="#" class="social-link"><i data-lucide="facebook"></i></a>
+              <a href="#" class="social-link"><i data-lucide="instagram"></i></a>
+            </div>
+          </div>
+
+          <!-- Links Column -->
+          <div class="footer-col">
+            <h4>Navegación</h4>
+            <ul class="footer-links">
+              <li><a href="#services">Servicios</a></li>
+              <li><a href="#about">Nosotros</a></li>
+              <li><a href="#errors">Errores Comunes</a></li>
+              <li><a href="#contact">Contacto</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Column -->
+          <div class="footer-col">
+            <h4>Contacto</h4>
+            <ul class="footer-contact">
+              <li>
+                <i data-lucide="map-pin"></i>
+                <span>Huelva, Andalucía</span>
+              </li>
+              <li>
+                <i data-lucide="mail"></i>
+                <span>info@gestiona-asesoria.com</span>
+              </li>
+              <li>
+                <i data-lucide="phone"></i>
+                <span>+34 959 00 00 00</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 Gestiona Asesoría. Todos los derechos reservados.</p>
+          <div class="legal-links">
+            <a href="#">Aviso Legal</a>
+            <a href="#">Privacidad</a>
+            <a href="#">Cookies</a>
+          </div>
+        </div>
       </div>
     </footer>
 
