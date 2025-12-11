@@ -401,6 +401,42 @@ p {
     }
 }
 
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.mute-toggle {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.mute-toggle:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    transform: scale(1.1);
+}
+
+.mute-toggle svg {
+    width: 20px;
+    height: 20px;
+}
+
 /* Errors Section */
 .cards-grid {
     display: grid;
@@ -725,4 +761,359 @@ footer {
     .carousel-container {
         aspect-ratio: 4/3;
     }
+}
+
+/* Profile Selection Section - Redesigned */
+.profile-section {
+    background: var(--bg-alt);
+    /* Light gray background */
+    padding: 4rem 0;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    margin-top: 2.5rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    /* Vertical flex layout */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+    /* Very subtle elegant shadow */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    border: 1px solid white;
+    position: relative;
+    isolation: isolate;
+}
+
+/* Hover Effect: Lift up */
+.profile-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 30px 60px rgba(240, 90, 26, 0.15);
+    /* Orange atmospheric glow */
+    border-color: rgba(240, 90, 26, 0.2);
+}
+
+.profile-image {
+    width: 100%;
+    height: 200px;
+    /* Reduced height */
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+/* Subtle orange overlay on image hover */
+.profile-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.profile-card:hover .profile-image img {
+    transform: scale(1.1);
+}
+
+.profile-content {
+    flex: 1;
+    /* Take remaining space */
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center content */
+    text-align: center;
+}
+
+.profile-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+    color: var(--text-main);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Orange underline for title */
+.profile-content h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+.profile-desc {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    min-height: 3rem;
+    /* Align lines even if text varies slightly */
+}
+
+.profile-features {
+    list-style: none;
+    margin-bottom: 2.5rem;
+    width: 100%;
+    text-align: left;
+    /* Keep features left-aligned for readability */
+    padding-left: 1rem;
+}
+
+.profile-features li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+.profile-features li i {
+    color: var(--primary);
+    /* Orange Checkmarks - NO BLUE */
+    width: 20px;
+    height: 20px;
+    background: rgba(240, 90, 26, 0.1);
+    padding: 2px;
+    border-radius: 50%;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.icon-sm {
+    width: 18px;
+    height: 18px;
+}
+
+/* Creative Services Section */
+.services-section {
+    background: linear-gradient(-45deg, #f05a1a, #ff8c32, #d04a10, #e87c4d);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Update section header text for dark background */
+.services-section .section-header h2 {
+    color: white;
+}
+
+.services-section .section-header .highlight {
+    color: #fff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.services-section .subtitle {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.services-grid-creative {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Force 4 columns */
+    gap: 1.5rem;
+    /* Sligthly smaller gap to fit */
+    margin-top: 3rem;
+}
+
+/* Responsive: Stack on tablet/mobile */
+@media (max-width: 1024px) {
+    .services-grid-creative {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .services-grid-creative {
+        grid-template-columns: 1fr;
+    }
+}
+
+.creative-card {
+    position: relative;
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 320px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.creative-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(240, 90, 26, 0.1);
+    border-color: rgba(240, 90, 26, 0.3);
+}
+
+/* Background Icon Decoration */
+.card-bg-icon {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    opacity: 0.05;
+    transform: rotate(15deg) scale(1);
+    transition: all 0.5s ease;
+    color: var(--primary);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.card-bg-icon svg {
+    width: 180px;
+    height: 180px;
+}
+
+.creative-card:hover .card-bg-icon {
+    transform: rotate(0deg) scale(1.1);
+    opacity: 0.1;
+}
+
+.card-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-wrapper {
+    width: 50px;
+    height: 50px;
+    background: var(--bg-card);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    color: var(--primary);
+    transition: all 0.3s ease;
+}
+
+.icon-wrapper svg {
+    width: 24px;
+    height: 24px;
+}
+
+.creative-card:hover .icon-wrapper {
+    background: var(--primary);
+    color: white;
+    transform: scale(1.1);
+}
+
+.creative-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+    transition: color 0.3s ease;
+}
+
+.creative-card:hover h3 {
+    color: var(--primary);
+}
+
+.creative-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+/* Slide-up CTA */
+.service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    opacity: 0.8;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.service-link svg {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+}
+
+.service-link:hover {
+    opacity: 1;
+}
+
+.service-link:hover svg {
+    transform: translateX(5px);
+}
+
+/* On card hover, distinct effect on CTA */
+.creative-card:hover .service-link {
+    color: var(--primary-hover);
 }

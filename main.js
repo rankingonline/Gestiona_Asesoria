@@ -44,6 +44,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 4000); // Change every 4 seconds
   }
 
+  // Video Mute Toggle Logic
+  const solutionsVideo = document.getElementById('solutionsVideo');
+  const muteToggle = document.getElementById('muteToggle');
+
+  if (solutionsVideo && muteToggle) {
+    muteToggle.addEventListener('click', () => {
+      solutionsVideo.muted = !solutionsVideo.muted;
+
+      // Update icon based on state
+      const iconName = solutionsVideo.muted ? 'volume-x' : 'volume-2';
+
+      // Re-render icon (Lucide needs to re-scan or we manually replace SVG content)
+      // Since Lucide replaces <i> with <svg>, we need to clear and re-add element for Lucide to process,
+      // OR manually swap SVG. The easiest robust way with Lucide static linking:
+      muteToggle.innerHTML = `<i data-lucide="${iconName}"></i>`;
+      window.lucide.createIcons();
+    });
+  }
+
   // Smooth Scroll for anchor links (just in case native behavior fails or needs enhancement)
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

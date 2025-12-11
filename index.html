@@ -42,6 +42,138 @@
       </div>
     </header>
 
+    <!-- Profile Selection Section -->
+    <section id="profile-selector" class="section profile-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Soluciones adaptadas a <span class="highlight">tu realidad</span></h2>
+          <p class="subtitle">Cada negocio es un mundo. Elige tu perfil para descubrir cómo podemos ayudarte
+            específicamente.</p>
+        </div>
+
+        <div class="profile-grid">
+          <!-- Profile Card: Company -->
+          <div class="profile-card">
+            <div class="profile-image">
+              <img src="/images/profile-company.png" alt="Empresa Agrícola">
+            </div>
+            <div class="profile-content">
+              <h3>SOY EMPRESA</h3>
+              <p class="profile-desc">Para Sociedades Limitadas (S.L.), Anónimas o Pymes con empleados.</p>
+              <ul class="profile-features">
+                <li><i data-lucide="check"></i> Gestión de nóminas y equipos</li>
+                <li><i data-lucide="check"></i> Impuesto de Sociedades complejo</li>
+                <li><i data-lucide="check"></i> Contabilidad analítica y libros</li>
+              </ul>
+              <a href="#contact" class="btn btn-outline small">VER SOLUCIONES <i data-lucide="arrow-right"
+                  class="icon-sm"></i></a>
+            </div>
+          </div>
+
+          <!-- Profile Card: Freelance -->
+          <div class="profile-card">
+            <div class="profile-image">
+              <img src="/images/profile-freelance.png" alt="Autónomo Agrícola">
+            </div>
+            <div class="profile-content">
+              <h3>SOY AUTÓNOMO</h3>
+              <p class="profile-desc">Para Freelances, profesionales independientes y emprendedores.</p>
+              <ul class="profile-features">
+                <li><i data-lucide="check"></i> Declaraciones IVA e IRPF</li>
+                <li><i data-lucide="check"></i> Alta rápida en RETA</li>
+                <li><i data-lucide="check"></i> Facturación simplificada</li>
+              </ul>
+              <a href="#contact" class="btn btn-outline small">VER SOLUCIONES <i data-lucide="arrow-right"
+                  class="icon-sm"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section services-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Un Enfoque Integral para tu <span class="highlight">Negocio y Patrimonio</span></h2>
+          <p class="subtitle">Cubrimos todas las áreas clave para garantizar tu tranquilidad y crecimiento.</p>
+        </div>
+
+        <div class="services-grid-creative">
+          <!-- Asesoría Fiscal -->
+          <div class="creative-card">
+            <div class="card-bg-icon">
+              <i data-lucide="calculator"></i>
+            </div>
+            <div class="card-content">
+              <div class="icon-wrapper">
+                <i data-lucide="calculator"></i>
+              </div>
+              <h3>Asesoría Fiscal</h3>
+              <p>Planificación y presentación de impuestos, cumplimiento normativo y optimización fiscal.</p>
+              <a href="#contact" class="service-link">
+                <span>Saber más</span>
+                <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Asesoría Contable -->
+          <div class="creative-card">
+            <div class="card-bg-icon">
+              <i data-lucide="bar-chart-3"></i>
+            </div>
+            <div class="card-content">
+              <div class="icon-wrapper">
+                <i data-lucide="bar-chart-3"></i>
+              </div>
+              <h3>Asesoría Contable</h3>
+              <p>Llevamos tu contabilidad con precisión: libros, balances, cierres e informes analíticos.</p>
+              <a href="#contact" class="service-link">
+                <span>Saber más</span>
+                <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Asesoría Laboral -->
+          <div class="creative-card">
+            <div class="card-bg-icon">
+              <i data-lucide="briefcase"></i>
+            </div>
+            <div class="card-content">
+              <div class="icon-wrapper">
+                <i data-lucide="briefcase"></i>
+              </div>
+              <h3>Asesoría Laboral</h3>
+              <p>Gestión completa de nóminas, contratos, Seguridad Social y relaciones laborales.</p>
+              <a href="#contact" class="service-link">
+                <span>Saber más</span>
+                <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Asesoría Jurídica -->
+          <div class="creative-card">
+            <div class="card-bg-icon">
+              <i data-lucide="scale"></i>
+            </div>
+            <div class="card-content">
+              <div class="icon-wrapper">
+                <i data-lucide="scale"></i>
+              </div>
+              <h3>Asesoría Jurídica</h3>
+              <p>Acompañamiento legal y mercantil para empresas, autónomos y patrimonios familiares.</p>
+              <a href="#contact" class="service-link">
+                <span>Saber más</span>
+                <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Agricultural Calendar Section -->
     <section id="calendar" class="section calendar-section">
       <div class="container">
@@ -182,8 +314,6 @@
                 fiscal</strong>. Nuestra promesa es simple: conocimiento profundo del sector y un acompañamiento tan
               cercano que te sentirás como si tuviéramos las oficinas en tu propia finca.</p>
 
-            <h3 class="highlight-subtitle">Somos expertos en lo que necesitas</h3>
-
             <ul class="feature-list">
               <li>
                 <span class="check">✓</span>
@@ -212,7 +342,15 @@
             </ul>
           </div>
           <div class="image-content">
-            <img src="/images/hero-orange-berry.png" alt="Fresas y Arándanos" class="img-responsive rounded-shadow">
+            <div class="video-wrapper">
+              <video id="solutionsVideo" class="img-responsive rounded-shadow" autoplay loop muted playsinline>
+                <source src="/images/video-gestiona.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+              </video>
+              <button id="muteToggle" class="mute-toggle" aria-label="Activar sonido">
+                <i data-lucide="volume-x"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
