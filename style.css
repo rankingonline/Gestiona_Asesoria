@@ -1365,7 +1365,12 @@ p {
 }
 
 /* Contact */
+.about-section {
+    padding-bottom: 2.5rem;
+}
+
 .contact-section {
+    padding-top: 2.5rem;
     background: var(--bg-alt);
 }
 
