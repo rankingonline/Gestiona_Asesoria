@@ -437,7 +437,45 @@ p {
     height: 20px;
 }
 
-/* Errors Section */
+/* Errors Section with Watermark */
+.errors-section {
+    position: relative;
+    overflow: hidden;
+    /* Clips the giant logo so it doesn't break page layout */
+    background-color: var(--bg-alt);
+    /* Ensure background color is consistent */
+    z-index: 1;
+}
+
+.watermark-container {
+    position: absolute;
+    top: 50%;
+    left: -35%;
+    /* Centered relative to left, slightly overflowing */
+    right: auto;
+    transform: translateY(-40%) rotate(15deg);
+    /* Reversed rotation for left side */
+    width: 50%;
+    max-width: 1200px;
+    opacity: 0.15;
+    /* Increased opacity for visibility */
+    pointer-events: none;
+    z-index: 0;
+    /* Place it just above background */
+}
+
+.errors-section .container {
+    position: relative;
+    z-index: 1;
+    /* Ensure text is above watermark */
+}
+
+.watermark-container img {
+    width: 200%;
+    height: auto;
+    display: block;
+}
+
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
