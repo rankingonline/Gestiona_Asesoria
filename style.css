@@ -895,12 +895,109 @@ p {
     /* Warning/Critical color */
 }
 
-/* Mobile Adjustments for Table */
+/* Mobile Adjustments for Table - Card Layout */
 @media (max-width: 768px) {
+    .calendar-table-container {
+        border: none;
+        background: transparent;
+        box-shadow: none;
+        overflow-x: visible;
+    }
 
-    .calendar-table th,
+    .calendar-table {
+        border: 0;
+        min-width: auto;
+    }
+
+    /* Hide table header */
+    .calendar-table thead {
+        display: none;
+    }
+
+    /* Make each row a card */
+    .calendar-table tbody tr {
+        display: block;
+        margin-bottom: 1.5rem;
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        border: 1px solid var(--border);
+        overflow: hidden;
+    }
+
+    .calendar-table tbody tr:hover {
+        background: white;
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+        border-color: var(--primary);
+    }
+
+    /* Make each cell a block with label */
     .calendar-table td {
-        padding: 1rem;
+        display: block;
+        text-align: left;
+        border: none;
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid var(--border);
+        position: relative;
+        color: var(--text-main);
+    }
+
+    .calendar-table td:last-child {
+        border-bottom: none;
+    }
+
+    /* Add labels before content using data-label attribute */
+    .calendar-table td:not(.period)::before {
+        content: attr(data-label);
+        display: block;
+        font-weight: 700;
+        color: var(--primary);
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Period cell special styling */
+    .period {
+        background: rgba(240, 90, 26, 0.05);
+        display: flex !important;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.25rem 1.5rem !important;
+        min-width: auto;
+        font-weight: 600;
+        color: var(--text-main);
+        border-bottom: 1px solid var(--border) !important;
+    }
+
+    /* Don't show data-label for period cell */
+    .period::before {
+        display: none !important;
+    }
+
+    .period-icon {
+        width: 50px;
+        height: 50px;
+        flex-shrink: 0;
+    }
+
+    .period span {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--text-main);
+        flex: 1;
+        display: block;
+    }
+
+    /* Highlight cell adjustments */
+    .highlight-cell {
+        background: rgba(255, 107, 107, 0.05);
+    }
+
+    .highlight-cell strong {
+        margin-top: 0.25rem;
+        font-size: 0.9rem;
     }
 }
 
