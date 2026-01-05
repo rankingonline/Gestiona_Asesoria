@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestiona Asesoría - Expertos en Campo</title>
+  <meta name="description"
+    content="Asesoría experta en fresa y arándano en Huelva. Planificación fiscal adaptada a tu ciclo productivo.">
+  <link rel="stylesheet" href="../../shared/css/global.css">
+  <link rel="stylesheet" href="./home.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="logo">
+        <img src="../../../images/gestiona logo.svg" alt="Gestiona Asesoría" class="logo-img">
+      </div>
+
+      <!-- Desktop Nav Links -->
+      <div class="nav-links">
+        <a href="#calendar">Calendario</a>
+        <a href="#solutions">Soluciones</a>
+        <a href="../nosotros/index.html">Nosotros</a>
+        <a href="#contact" class="btn btn-primary small">Contacto</a>
+      </div>
+
+      <!-- Mobile Actions -->
+      <div class="mobile-actions">
+        <a href="tel:+34123456789" class="call-button" aria-label="Llamar">
+          <i data-lucide="phone"></i>
+        </a>
+        <button class="hamburger-menu" aria-label="Menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+      <div class="mobile-menu-content">
+        <button class="close-menu" aria-label="Cerrar menú">
+          <i data-lucide="x"></i>
+        </button>
+        <nav class="mobile-nav">
+          <a href="#calendar">Calendario</a>
+          <a href="#solutions">Soluciones</a>
+          <a href="../nosotros/index.html">Nosotros</a>
+          <a href="#contact" class="btn btn-primary">Contacto</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Hero Section: Modern & Minimalist -->
+    <header class="hero-modern" id="home">
+      <div class="hero-container">
+        <div class="hero-text-side">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>Especialistas en Agro Huelva</span>
+          </div>
+          <h1 class="hero-title">
+            <span class="line-wrapper"><span class="line-reveal">Tus números y</span></span>
+            <span class="line-wrapper"><span class="line-reveal">tu campo en</span></span>
+            <span class="line-wrapper"><span class="line-reveal text-highlight">buenas manos.</span></span>
+          </h1>
+          <p class="hero-subtitle">
+            Gestionamos la contabilidad, fiscalidad y laboral de tu explotación agrícola
+            para que tú te dediques a lo importante: <strong>producir.</strong>
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary btn-lg magnetic-btn">
+              <span>Solicitar Auditoría Gratis</span>
+              <div class="btn-fill"></div>
+            </a>
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-number">15+</span>
+                <span class="stat-label">Años Exp.</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <span class="stat-number">300+</span>
+                <span class="stat-label">Agricultores</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual-side">
+          <div class="visual-wrapper">
+            <!-- Main Image Masked -->
+            <div class="main-image-mask">
+              <img src="../../../images/hero-bg-new.png" alt="Consultor y Agricultor" class="hero-img-main data-scroll"
+                data-scroll-speed="0.5">
+            </div>
+
+            <!-- Floating Elements -->
+            <div class="floating-card glass-card card-top-right">
+              <div class="card-icon orange"><i data-lucide="trending-up"></i></div>
+              <div class="card-text">
+                <strong>+20% Rentabilidad</strong>
+                <span>Media anual clientes</span>
+              </div>
+            </div>
+
+            <div class="floating-card glass-card card-bottom-left">
+              <div class="card-icon green"><i data-lucide="check-circle-2"></i></div>
+              <div class="card-text">
+                <strong>Gestión Integral</strong>
+                <span>Fiscal • Laboral • Contable</span>
+              </div>
+            </div>
+
+            <!-- Decorative Abstract Shapes -->
+            <div class="abstract-shape shape-1"></div>
+            <div class="abstract-shape shape-2"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Background Elements -->
+      <div class="hero-bg-gradient"></div>
+      <img src="../../../images/gestiona-icon.svg" class="hero-bg-logo-watermark" alt="">
+    </header>
+
+    <!-- Profile Selection Section -->
+    <section id="profile-selector" class="section profile-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Tu ciclo de cultivo es nuestro <span class="highlight">calendario fiscal.</span></h2>
+          <p class="calendar-subtitle">Sabemos cómo se vive una campaña: primero inviertes, luego recoges. Ordenamos tus
+            gastos e ingresos según ese ritmo para que pagues impuestos acordes a tu esfuerzo real.
+          </p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-line"></div>
+
+          <!-- Item 1: Preparación -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="marker-icon">
+                <i data-lucide="shovel"></i>
+              </div>
+            </div>
+            <div class="timeline-content left">
+              <div class="period-badge">Julio - Agosto</div>
+              <h3>Preparación</h3>
+              <p>Desinfección y preparación de la tierra.</p>
+            </div>
+            <div class="timeline-content right highlight-box">
+              <span class="impact-label">Impacto Fiscal</span>
+              <h3>Inicio de Gastos</h3>
+              <p>Comienzan a acumularse los costes que luego serán deducibles.</p>
+            </div>
+          </div>
+
+          <!-- Item 2: Plantación -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="marker-icon">
+                <i data-lucide="sprout"></i>
+              </div>
+            </div>
+            <div class="timeline-content left">
+              <div class="period-badge">Septiembre - Noviembre</div>
+              <h3>Plantación</h3>
+              <p>Plantación, cubrición y primeros cuidados intensivos.</p>
+            </div>
+            <div class="timeline-content right highlight-box">
+              <span class="impact-label">Impacto Fiscal</span>
+              <h3>Acumulación Crítica</h3>
+              <p>El grueso de gastos anuales ocurre aquí, sin ingresos todavía.</p>
+            </div>
+          </div>
+
+          <!-- Item 3: Inicio Recolección -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="marker-icon">
+                <i data-lucide="flower-2"></i>
+              </div>
+            </div>
+            <div class="timeline-content left">
+              <div class="period-badge">Diciembre - Enero</div>
+              <h3>Inicio de Campaña</h3>
+              <p>Primeros frutos y arranque de la recolección.</p>
+            </div>
+            <div class="timeline-content right highlight-box">
+              <span class="impact-label">Impacto Fiscal</span>
+              <h3>Primeros Ingresos</h3>
+              <p>Cambio de flujo: empiezan a entrar divisas en la explotación.</p>
+            </div>
+          </div>
+
+          <!-- Item 4: Recolección Fuerte -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="marker-icon">
+                <i data-lucide="coins"></i>
+              </div>
+            </div>
+            <div class="timeline-content left">
+              <div class="period-badge">Enero - Mayo/Junio</div>
+              <h3>Recolección Fuerte</h3>
+              <p>Pico de producción y máxima actividad laboral.</p>
+            </div>
+            <div class="timeline-content right highlight-box warning">
+              <span class="impact-label">¡Atención!</span>
+              <h3>Ingresos vs. Gastos Año Anterior</h3>
+              <p>Aquí es crucial la <strong>periodificación</strong>. Si no compensas los gastos del año pasado, pagarás
+                impuestos de más.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients Carousel Section -->
+    <section class="clients-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <p class="eyebrow">Confían en nosotros</p>
+          <h2>Más de <span class="highlight">300 agricultores</span> en Huelva</h2>
+        </div>
+
+        <div class="clients-carousel-wrapper">
+          <div class="clients-track">
+            <!-- First set of logos -->
+            <div class="client-logo">
+              <img src="../../../images/colaborations/client-1.png" alt="Cliente 1">
+            </div>
+            <div class="client-logo">
+              <img src="../../../images/colaborations/client-2.png" alt="Cliente 2">
+            </div>
+            <div class="client-logo">
+              <img src="../../../images/colaborations/client-3.png" alt="Cliente 3">
+            </div>
+            <div class="client-logo">
+              <img src="../../../images/colaborations/client-4.png" alt="Cliente 4">
+            </div>
+            <div class="client-logo">
+              <img src="../../../images/colaborations/client-5.png" alt="Cliente 5">
+            </div>
+            <div class="client-logo">
+              <img src="../../../images/colaborations/client-6.png" alt="Cliente 6">
+            </div>
+            <div class="client-logo">
+              <img src="../../../images/colaborations/client-7.png" alt="Cliente 7">
+            </div>
+            <div class="client-logo">
+              <img src="../../../images/colaborations/client-8.png" alt="Cliente 8">
+            </div>
+            <div class="client-logo">
+              <img src="../../../images/colaborations/client-9.png" alt="Cliente 9">
+            </div>
+            <div class="client-logo">
+              <img src="../../../images/colaborations/client-10.png" alt="Cliente 10">
+            </div>
+
+            <!-- Duplicate set for infinite loop -->
+            <div class="client-logo">
+              <img src="../../../images/colaborations/client-1.png" alt="Cliente 1">
+            </div>
+            <div class="client-logo">
+              <img src="../../../images/colaborations/client-2.png" alt="Cliente 2">
+            </div>
+            <div class="client-logo">
+              <img src="../../../images/colaborations/client-3.png" alt="Cliente 3">
+            </div>
+            <div class="client-logo">
+              <img src="../../../images/colaborations/client-4.png" alt="Cliente 4">
+            </div>
+            <div class="client-logo">
+              <img src="../../../images/colaborations/client-5.png" alt="Cliente 5">
+            </div>
+            <div class="client-logo">
+              <img src="../../../images/colaborations/client-6.png" alt="Cliente 6">
+            </div>
+            <div class="client-logo">
+              <img src="../../../images/colaborations/client-7.png" alt="Cliente 7">
+            </div>
+            <div class="client-logo">
+              <img src="../../../images/colaborations/client-8.png" alt="Cliente 8">
+            </div>
+            <div class="client-logo">
+              <img src="../../../images/colaborations/client-9.png" alt="Cliente 9">
+            </div>
+            <div class="client-logo">
+              <img src="../../../images/colaborations/client-10.png" alt="Cliente 10">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section services-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Un Enfoque Integral para tu <span class="highlight">Negocio y Patrimonio</span></h2>
+          <p class="subtitle">Cubrimos todas las áreas clave para garantizar tu tranquilidad y crecimiento.</p>
+        </div>
+
+        <div class="services-grid-creative">
+          <!-- Asesoría Fiscal -->
+          <div class="creative-card">
+            <div class="card-bg-icon">
+              <i data-lucide="calculator"></i>
+            </div>
+            <div class="card-content">
+              <div class="icon-wrapper">
+                <i data-lucide="calculator"></i>
+              </div>
+              <h3>Fiscalidad según tu campaña</h3>
+              <p>Tus impuestos se calculan según tu ciclo real: gastos en plantación, ingresos en recolección.</p>
+              <a href="#contact" class="service-link">
+                <span>Saber más</span>
+                <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Asesoría Contable -->
+          <div class="creative-card">
+            <div class="card-bg-icon">
+              <i data-lucide="bar-chart-3"></i>
+            </div>
+            <div class="card-content">
+              <div class="icon-wrapper">
+                <i data-lucide="bar-chart-3"></i>
+              </div>
+              <h3>Contabilidad que refleja tu cultivo</h3>
+              <p>Organizamos tus números por temporadas, evitando que pagues de más por no periodificar bien.</p>
+              <a href="#contact" class="service-link">
+                <span>Saber más</span>
+                <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Asesoría Laboral -->
+          <div class="creative-card">
+            <div class="card-bg-icon">
+              <i data-lucide="briefcase"></i>
+            </div>
+            <div class="card-content">
+              <div class="icon-wrapper">
+                <i data-lucide="briefcase"></i>
+              </div>
+              <h3>Laboral pensado para tus picos</h3>
+              <p>Contratos y nóminas adaptados a las subidas de mano de obra en plena campaña.</p>
+              <a href="#contact" class="service-link">
+                <span>Saber más</span>
+                <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Common Errors Section -->
+    <section id="errors" class="section errors-section">
+      <div class="watermark-container">
+        <img src="../../../images/gestiona-icon.svg" alt="" aria-hidden="true" />
+      </div>
+      <div class="container">
+        <div class="section-header">
+          <h2>¿Te suenan estos errores que <span class="highlight">cuestan dinero</span> a los agricultores de Huelva?
+          </h2>
+        </div>
+        <div class="cards-grid">
+          <!-- Error 1 -->
+          <div class="card error-card-new">
+            <h3>No entender la periodificación de gastos</h3>
+            <div class="comparison-container">
+              <div class="comp-item problem">
+                <div class="comp-icon red">
+                  <i data-lucide="x-circle"></i>
+                </div>
+                <p>Trabajos en curso sin registrar</p>
+              </div>
+
+              <div class="comp-arrow">
+                <i data-lucide="arrow-down"></i>
+              </div>
+
+              <div class="comp-item result">
+                <div class="comp-icon orange">
+                  <i data-lucide="wallet-2"></i> <!-- Wallet implying money impact -->
+                </div>
+                <p>Pagas más impuestos de los que deberías</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Error 2 -->
+          <div class="card error-card-new">
+            <h3>Asesoría que no conoce tu campaña</h3>
+            <div class="comparison-container">
+              <div class="comp-item problem">
+                <div class="comp-icon red">
+                  <i data-lucide="x-circle"></i>
+                </div>
+                <p>No entienden el ciclo de berries</p>
+              </div>
+
+              <div class="comp-arrow">
+                <i data-lucide="arrow-down"></i>
+              </div>
+
+              <div class="comp-item result">
+                <div class="comp-icon orange">
+                  <i data-lucide="file-warning"></i>
+                </div>
+                <p>Te aplican estrategias que no encajan contigo</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Error 3 -->
+          <div class="card error-card-new">
+            <h3>Falta de cercanía real</h3>
+            <div class="comparison-container">
+              <div class="comp-item problem">
+                <div class="comp-icon red">
+                  <i data-lucide="x-circle"></i>
+                </div>
+                <p>Solo tramitan documentos</p>
+              </div>
+
+              <div class="comp-arrow">
+                <i data-lucide="arrow-down"></i>
+              </div>
+
+              <div class="comp-item result">
+                <div class="comp-icon orange">
+                  <i data-lucide="trending-down"></i>
+                </div>
+                <p>Se pierden oportunidades de ahorro y planificación</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section id="solutions" class="section value-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Somos la asesoría que te da la tranquilidad para <span class="highlight">enfocarte en tu cosecha.</span>
+          </h2>
+        </div>
+        <div class="split-layout">
+          <div class="text-content">
+            <ul class="feature-list">
+              <li>
+                <span class="check">✓</span>
+                <div>
+                  <strong>Fiscalidad alineada al campo:</strong>
+                  Ajustamos tus impuestos a cómo funcionan realmente la fresa y el arándano, para que no pagues de más.
+                </div>
+              </li>
+              <li>
+                <span class="check">✓</span>
+                <div>
+                  <strong>Laboral de campaña:</strong>
+                  Gestionamos contratos y picos de mano de obra con alguien que sí conoce tus temporadas.
+                </div>
+              </li>
+              <li>
+                <span class="check">✓</span>
+                <div>
+                  <strong>Cercanía real:</strong>
+                  Estamos a tu lado durante la campaña, atentos a tus dudas y evitando problemas antes de que aparezcan.
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="image-content">
+            <div class="video-wrapper">
+              <video id="solutionsVideo" class="img-responsive rounded-shadow" autoplay loop muted playsinline>
+                <source src="../../../images/video-short.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+              </video>
+              <button id="muteToggle" class="mute-toggle" aria-label="Activar sonido">
+                <i data-lucide="volume-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <!-- About Us -->
+    <section id="about" class="section about-section dark-alt">
+      <div class="container">
+        <div class="split-layout reverse">
+          <div class="text-content">
+            <h2>Expertos en números, <span class="highlight">aliados</span> de quienes cultivan futuro.</h2>
+            <p>Conocemos el ciclo agrícola y el esfuerzo que hay detrás de cada campaña. Para nosotros, tus números
+              reflejan tu trabajo y tu historia.</p>
+            <a href="#contact" class="btn btn-primary">Hablemos de tu explotación</a>
+          </div>
+          <div class="image-content">
+            <div class="carousel-container rounded-shadow">
+              <div class="carousel-slide active" style="background-image: url('../../../images/team-working.png');">
+              </div>
+              <div class="carousel-slide" style="background-image: url('../../../images/team-handshake.png');"></div>
+              <div class="carousel-slide" style="background-image: url('../../../images/team-meeting-human.png');">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / CTA -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="contact-box">
+          <h2>Tu campaña ya tiene sabor. <br>Trabajemos para que tenga <span class="highlight">mejor rendimiento.</span>
+          </h2>
+
+          <form id="contact-form" class="styled-form">
+            <div class="form-group">
+              <input type="text" placeholder="Nombre" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Correo Electrónico" required />
+            </div>
+            <div class="form-group">
+              <input type="tel" placeholder="Teléfono" />
+            </div>
+            <div class="form-group">
+              <textarea placeholder="¿En qué podemos ayudarte?" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary full-width">Agenda una reunión</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Brand Column -->
+          <div class="footer-col brand-col">
+            <div class="logo footer-logo highlight-logo">
+              <img src="../../../images/gestiona-white-text.svg" alt="Gestiona Asesoría Logo" class="footer-logo-img">
+            </div>
+            <p class="footer-desc">Especialistas en el sector agroalimentario de Huelva. Tu tranquilidad fiscal y
+              laboral es nuestra cosecha.</p>
+            <div class="social-links">
+              <a href="#" class="social-link"><i data-lucide="linkedin"></i></a>
+              <a href="#" class="social-link"><i data-lucide="facebook"></i></a>
+              <a href="#" class="social-link"><i data-lucide="instagram"></i></a>
+            </div>
+          </div>
+
+          <!-- Links Column -->
+          <div class="footer-col">
+            <h4>Navegación</h4>
+            <ul class="footer-links">
+              <li><a href="#services">Servicios</a></li>
+              <li><a href="#about">Nosotros</a></li>
+              <li><a href="#errors">Errores Comunes</a></li>
+              <li><a href="#contact">Contacto</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Column -->
+          <div class="footer-col">
+            <h4>Contacto</h4>
+            <ul class="footer-contact">
+              <li>
+                <i data-lucide="map-pin"></i>
+                <span>Huelva, Andalucía</span>
+              </li>
+              <li>
+                <i data-lucide="mail"></i>
+                <span>info@gestiona-asesoria.com</span>
+              </li>
+              <li>
+                <i data-lucide="phone"></i>
+                <span>+34 959 00 00 00</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 Gestiona Asesoría. Todos los derechos reservados.</p>
+          <div class="legal-links">
+            <a href="#">Aviso Legal</a>
+            <a href="#">Privacidad</a>
+            <a href="#">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  <script type="module" src="./home.js"></script>
+</body>
+
+</html>
