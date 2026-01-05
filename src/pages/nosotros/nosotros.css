@@ -4,9 +4,44 @@
 }
 
 /* About Hero Section */
+@keyframes heroGradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes heroBlobMove {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+        transform: translate(30px, -50px) scale(1.1);
+    }
+
+    66% {
+        transform: translate(-20px, 20px) scale(0.95);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
 .about-hero {
-    padding: 180px 0 100px;
-    background: linear-gradient(180deg, rgba(240, 90, 26, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
+    padding: 140px 0 60px;
+    /* Much stronger contrast: Vibrant Orange Tint, Warm Peach, White, Soft Clay */
+    background: linear-gradient(-45deg, rgba(240, 90, 26, 0.35), #fff6de, #fff3f3, #ffcab0);
+    background-size: 400% 400%;
+    animation: heroGradientMove 8s ease infinite;
     position: relative;
     overflow: hidden;
 }
@@ -20,16 +55,44 @@
     height: 100%;
     background-image: radial-gradient(#f05a1a 0.5px, transparent 0.5px);
     background-size: 24px 24px;
-    opacity: 0.1;
-    z-index: -1;
+    opacity: 0.15;
+    /* Increased from 0.1 */
+    z-index: 0;
     mask-image: linear-gradient(to bottom, black 0%, transparent 80%);
     -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 80%);
 }
 
+.about-hero::after {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    /* Increased opacity significantly for the blob */
+    background: radial-gradient(circle, rgba(240, 90, 26, 0.4) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: 0;
+    animation: heroBlobMove 20s infinite ease-in-out;
+    pointer-events: none;
+}
+
+.about-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
 .tag-holder {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     display: flex;
-    justify-content: center;
+    /* Default is left align for flex row */
+}
+
+.tag-holder.left-align {
+    justify-content: flex-start;
 }
 
 .badge-pill {
@@ -44,19 +107,20 @@
 }
 
 .about-hero h1 {
-    font-size: 3.5rem;
-    max-width: 900px;
-    margin: 0 auto 2rem;
+    font-size: 3rem;
+    /* Slightly smaller for split layout */
+    margin: 0 0 1.5rem;
     line-height: 1.1;
     color: var(--text-main);
+    text-align: left;
 }
 
 .about-hero .lead {
-    font-size: 1.35rem;
+    font-size: 1.2rem;
     line-height: 1.7;
     color: var(--text-muted);
-    max-width: 750px;
-    margin: 0 auto 3rem;
+    margin: 0 0 2rem;
+    text-align: left;
 }
 
 .about-hero .text-block strong {
@@ -77,32 +141,65 @@
     transform: skewX(-12deg);
 }
 
-.text-center {
-    text-align: center;
-}
-
 .about-cta-wrapper {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
-/* Button Large override or modifier if not in global */
-.btn-lg {
-    padding: 1rem 2.5rem;
-    font-size: 1.1rem;
+/* Hero Group Image formatted for 2-col */
+.hero-group-image {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #f8f8f8;
+    /* Very light neutral */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    aspect-ratio: 16/9;
+    /* Force 16:9 ratio */
+    margin-top: 0;
+    /* Remove top margin */
+}
+
+.hero-group-image.placeholder-bg {
+    background-color: rgba(240, 90, 26, 0.706);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.hero-group-image.placeholder-bg::after {
+    content: 'foto grupal 16/9';
+}
+
+.hero-group-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
-    .about-hero {
-        padding: 140px 0 60px;
+@media (max-width: 900px) {
+    .about-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
     }
 
     .about-hero h1 {
-        font-size: 2.25rem;
+        font-size: 2.5rem;
     }
 
-    .about-hero .lead {
-        font-size: 1.1rem;
+    .tag-holder.left-align {
+        /* Keep left on mobile or center? user didn't say, but standard is keep left or center. keeping left for now */
+    }
+
+    .hero-group-image {
+        aspect-ratio: 16/9;
+        /* Keep 16:9 even on mobile */
     }
 }
 
@@ -282,6 +379,34 @@
 .collaboration-section {
     position: relative;
     padding: 6rem 0;
+    overflow: hidden;
+    background-color: #fff5ea;
+    /* Matches Home Error Section */
+    z-index: 1;
+}
+
+.watermark-container {
+    position: absolute;
+    top: 50%;
+    left: -45%;
+    right: auto;
+    transform: translateY(-40%) rotate(15deg);
+    width: 50%;
+    max-width: 1200px;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.watermark-container img {
+    width: 250%;
+    height: auto;
+    display: block;
+}
+
+.collaboration-section .container {
+    position: relative;
+    z-index: 2;
 }
 
 .split-layout {
@@ -317,6 +442,10 @@
     margin: 0;
     /* Override center global margin */
     width: 100%;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    /* Enhanced shadow */
 }
 
 @media (max-width: 900px) {
@@ -327,6 +456,12 @@
 
     .text-content h2 {
         font-size: 2.5rem;
+    }
+
+    .watermark-container {
+        left: -80%;
+        /* Push it further out on mobile so it doesn't cover text */
+        width: 150%;
     }
 }
 
@@ -545,3 +680,5 @@
         font-size: 2.2rem;
     }
 }
+
+/* End of file */
