@@ -212,6 +212,27 @@
     /* Prevent spillover */
 }
 
+/* Specific centering for Team Section Header */
+.team-section .section-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.team-section .section-header h2 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-section .section-header p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Background element for visual interest */
 .team-section::before {
     content: '';
@@ -468,78 +489,132 @@
 /* Location Section */
 .location-section {
     background-color: white;
+    padding: 6rem 0;
 }
 
-.contact-details-grid {
+.location-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin: 4rem 0;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
 }
 
-.contact-item {
+.location-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.location-info .lead {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    max-width: 500px;
+}
+
+.contact-list {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    border-radius: 16px;
-    background: #fff;
-    border: 1px solid var(--border);
-    transition: transform 0.3s ease;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
 }
 
-.contact-item:hover {
-    transform: translateY(-5px);
-    border-color: rgba(240, 90, 26, 0.3);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+.contact-row {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
 }
 
-.icon-circle {
-    width: 60px;
-    height: 60px;
+.icon-box {
+    width: 50px;
+    height: 50px;
     background: rgba(240, 90, 26, 0.1);
-    border-radius: 50%;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.5rem;
     color: var(--primary);
+    flex-shrink: 0;
 }
 
-.icon-circle svg {
-    width: 28px;
-    height: 28px;
+.icon-box svg {
+    width: 24px;
+    height: 24px;
 }
 
-.contact-item h3 {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
+.contact-row h3 {
+    font-size: 1.1rem;
     font-weight: 700;
+    margin-bottom: 0.25rem;
 }
 
-.contact-item p {
+.contact-row p {
     color: var(--text-muted);
-    line-height: 1.6;
-    margin-bottom: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
 }
 
-.contact-item a {
+.phones-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.phones-list a {
     color: var(--text-main);
     text-decoration: none;
-    transition: color 0.3s;
+    font-weight: 500;
+    transition: color 0.2s;
 }
 
-.contact-item a:hover {
+.phones-list a:hover {
     color: var(--primary);
 }
 
-.mt-4 {
-    margin-top: 2rem;
+.phones-list .separator {
+    color: #ccc;
+    font-size: 0.8rem;
 }
 
-@media (max-width: 768px) {
-    .contact-details-grid {
+.text-link {
+    display: inline-block;
+    margin-top: 0.25rem;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+/* Map Container */
+.location-map {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    /* Ensure height */
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    /* Soft shadow */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 900px) {
+    .location-grid {
         grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .location-map {
+        min-height: 300px;
+        order: -1;
+        /* Show map first on mobile? Or last? Let's leave text first for context */
+        order: 1;
+        /* Actually, text first is better */
     }
 }
 
@@ -632,16 +707,53 @@
     z-index: 10;
 }
 
-.final-cta-card {
-    background: var(--text-main);
-    color: white;
-    padding: 4rem 2rem;
-    border-radius: 24px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-    position: relative;
-    overflow: hidden;
+@keyframes shimmerWave {
+    0% {
+        transform: translateX(-150%) skewX(-20deg);
+    }
+
+    100% {
+        transform: translateX(200%) skewX(-20deg);
+    }
 }
 
+@keyframes levitate {
+    0% {
+        transform: translateY(0);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    }
+
+    50% {
+        transform: translateY(-10px);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+    }
+
+    100% {
+        transform: translateY(0);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.final-cta-card {
+    /* Solid Dark Background as Base */
+    background: #1a0500;
+    /* Removed background animation from main card */
+    animation: levitate 6s ease-in-out infinite;
+
+    color: white;
+    padding: 4rem;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Static Glow */
 .final-cta-card::before {
     content: '';
     position: absolute;
@@ -651,29 +763,86 @@
     height: 600px;
     background: radial-gradient(circle, rgba(240, 90, 26, 0.15) 0%, transparent 70%);
     pointer-events: none;
+    z-index: 0;
+}
+
+/* Moving Wave / Sheen */
+.final-cta-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right,
+            transparent 0%,
+            rgba(240, 90, 26, 0.05) 20%,
+            rgba(240, 90, 26, 0.3) 50%,
+            rgba(240, 90, 26, 0.05) 80%,
+            transparent 100%);
+    filter: blur(10px);
+    z-index: 0;
+    animation: shimmerWave 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    pointer-events: none;
+}
+
+.final-cta-card .cta-content {
+    flex: 1;
+    z-index: 1;
+    text-align: left;
 }
 
 .final-cta-card h2 {
     color: white;
     font-size: 2.8rem;
     margin-bottom: 1.5rem;
+    line-height: 1.1;
 }
 
 .final-cta-card .lead {
     color: rgba(255, 255, 255, 0.9);
-    margin: 0 auto 2.5rem;
+    margin: 0 0 2.5rem;
     font-size: 1.25rem;
-}
-
-.max-w-600 {
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-@media (max-width: 768px) {
+.final-cta-card .cta-logo {
+    flex: 0 0 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    opacity: 0.8;
+    /* Make it more visible */
+    transform: none;
+    /* Reset rotation */
+}
+
+.final-cta-card .cta-logo img {
+    width: 100%;
+    height: auto;
+    filter: brightness(0) invert(1);
+    display: block;
+}
+
+@media (max-width: 900px) {
     .final-cta-card {
-        padding: 3rem 1.5rem;
+        flex-direction: column;
+        padding: 3rem 2rem;
+        gap: 2rem;
+    }
+
+    .final-cta-card .cta-content {
+        text-align: left;
+    }
+
+    .final-cta-card .cta-logo {
+        display: block;
+        /* Show logo on mobile if it fits, or adjust size */
+        flex: 0 0 auto;
+        width: 150px;
+        /* Smaller on mobile */
+        opacity: 0.6;
     }
 
     .final-cta-card h2 {
