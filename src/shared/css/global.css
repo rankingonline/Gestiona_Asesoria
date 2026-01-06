@@ -158,13 +158,15 @@ p {
     position: absolute;
     width: 0;
     height: 2px;
-    bottom: -4px;
+    bottom: 6px;
+    /* Moved up significantly */
     left: 0;
     background-color: var(--primary);
     transition: width 0.3s ease;
 }
 
-.nav-links a:not(.btn):hover::after {
+.nav-links a:not(.btn):hover::after,
+.nav-links a:not(.btn).active::after {
     width: 100%;
 }
 
