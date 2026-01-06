@@ -307,3 +307,89 @@
         font-size: 2.2rem;
     }
 }
+
+/* Collaboration Section (Cloned from Nosotros) */
+.collaboration-section {
+    position: relative;
+    padding: 6rem 0;
+    overflow: hidden;
+    background-color: #fff5ea;
+    z-index: 1;
+}
+
+.watermark-container {
+    position: absolute;
+    top: 50%;
+    left: -45%;
+    right: auto;
+    transform: translateY(-40%) rotate(15deg);
+    width: 50%;
+    max-width: 1200px;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.watermark-container img {
+    width: 250%;
+    height: auto;
+    display: block;
+}
+
+.collaboration-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.split-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.text-content h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.text-content .lead {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: var(--text-muted);
+}
+
+.highlight-box-text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary);
+    border-left: 4px solid var(--primary);
+    padding-left: 1.5rem;
+    margin-top: 2rem;
+    font-family: var(--font-main);
+}
+
+.form-content .contact-box {
+    margin: 0;
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+}
+
+@media (max-width: 900px) {
+    .split-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .text-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .watermark-container {
+        left: -80%;
+        width: 150%;
+    }
+}
