@@ -2,3 +2,308 @@
 .page-content {
     min-height: 80vh;
 }
+
+/* Fiscal Hero Section (Cloned from Nosotros) */
+@keyframes heroGradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes heroBlobMove {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+        transform: translate(30px, -50px) scale(1.1);
+    }
+
+    66% {
+        transform: translate(-20px, 20px) scale(0.95);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+.fiscal-hero {
+    padding: 140px 0 60px;
+    background: linear-gradient(-45deg, rgba(240, 90, 26, 0.35), #fff6de, #fff3f3, #ffcab0);
+    background-size: 400% 400%;
+    animation: heroGradientMove 8s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+.fiscal-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-image: radial-gradient(#f05a1a 0.5px, transparent 0.5px);
+    background-size: 24px 24px;
+    opacity: 0.15;
+    z-index: 0;
+    mask-image: linear-gradient(to bottom, black 0%, transparent 80%);
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 80%);
+}
+
+.fiscal-hero::after {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(240, 90, 26, 0.4) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: 0;
+    animation: heroBlobMove 20s infinite ease-in-out;
+    pointer-events: none;
+}
+
+.fiscal-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.tag-holder {
+    margin-bottom: 1.5rem;
+    display: flex;
+}
+
+.tag-holder.left-align {
+    justify-content: flex-start;
+}
+
+.badge-pill {
+    background-color: rgba(240, 90, 26, 0.1);
+    color: var(--primary);
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.fiscal-hero h1 {
+    font-size: 3rem;
+    margin: 0 0 1.5rem;
+    line-height: 1.1;
+    color: var(--text-main);
+    text-align: left;
+}
+
+.fiscal-hero .lead {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin: 0 0 2rem;
+    text-align: left;
+}
+
+.fiscal-hero .text-block strong {
+    color: var(--text-main);
+    font-weight: 600;
+    position: relative;
+}
+
+.fiscal-hero .text-block strong::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 100%;
+    height: 6px;
+    background-color: rgba(240, 90, 26, 0.15);
+    z-index: -1;
+    transform: skewX(-12deg);
+}
+
+.hero-cta-wrapper {
+    margin-top: 1rem;
+}
+
+/* Hero Group Image */
+.hero-group-image {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #f8f8f8;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    aspect-ratio: 16/9;
+    margin-top: 0;
+}
+
+.hero-group-image.placeholder-bg {
+    background-color: rgba(240, 90, 26, 0.706);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.hero-group-image.placeholder-bg::after {
+    content: 'foto grupal 16/9';
+    /* This might need to be overridden if the text is irrelevant here, but user said 'placeholder' */
+}
+
+.hero-group-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .fiscal-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .fiscal-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-group-image {
+        aspect-ratio: 16/9;
+    }
+
+}
+
+/* Fiscal Points Section */
+.fiscal-points-section {
+    padding: 6rem 0;
+    background-color: white;
+}
+
+.max-w-800 {
+    max-width: 800px;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mt-5 {
+    margin-top: 5rem;
+}
+
+/* Enhanced Centering for Section Header */
+.fiscal-points-section .section-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fiscal-points-section .section-header h2 {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.fiscal-points-section .section-header .lead {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    width: 100%;
+}
+
+.points-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.point-card {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.point-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(240, 90, 26, 0.1);
+    border-color: rgba(240, 90, 26, 0.2);
+}
+
+.icon-circle.large {
+    width: 80px;
+    height: 80px;
+    background: rgba(240, 90, 26, 0.1);
+    color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.icon-circle.large svg {
+    width: 36px;
+    height: 36px;
+    stroke-width: 2px;
+}
+
+.point-card:hover .icon-circle.large {
+    transform: scale(1.1) rotate(5deg);
+    background: var(--primary);
+    color: white;
+}
+
+.point-card p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--text-main);
+    margin: 0;
+}
+
+.point-card strong {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+@media (max-width: 900px) {
+    .points-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+}
