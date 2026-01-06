@@ -164,7 +164,7 @@
 }
 
 .hero-group-image.placeholder-bg::after {
-    content: 'foto grupal 16/9';
+    content: 'foto Referencial a asesoria fiscal 16/9';
     /* This might need to be overridden if the text is irrelevant here, but user said 'placeholder' */
 }
 
