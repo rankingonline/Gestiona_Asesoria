@@ -393,3 +393,162 @@
         width: 150%;
     }
 }
+
+/* Comparison Section: Problems vs Solutions */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.comparison-section {
+    padding: 6rem 0;
+    /* Primary Gradient Background */
+    background: linear-gradient(-45deg, #f05a1a, #ff8c32, #d04a10, #e87c4d);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Header Adjustments for Dark Background */
+.comparison-section .section-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.comparison-section .section-header h2 {
+    color: white;
+    text-align: center;
+}
+
+.comparison-section .section-header .highlight {
+    color: white;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* New Grid Layout */
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.comparison-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.comparison-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-problem {
+    background-color: #fff1f0;
+    /* Light red/alert bg */
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.card-connector {
+    height: 40px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    position: relative;
+    z-index: 1;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+.card-connector svg {
+    background: white;
+    border-radius: 50%;
+    padding: 4px;
+    width: 28px;
+    height: 28px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-solution {
+    background-color: white;
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-top: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.badge-label {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.75rem;
+}
+
+.badge-label.warning {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: #c0392b;
+}
+
+.badge-label.success {
+    background-color: rgba(39, 174, 96, 0.1);
+    color: #27ae60;
+}
+
+.card-problem p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.card-solution p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text-main);
+}
+
+
+/* Responsive */
+/* Mobile adjustments for the cards if necessary, though auto-fit handles most */
+@media (max-width: 600px) {
+    .comparison-grid {
+        gap: 1.5rem;
+    }
+
+    .comparison-card {
+        margin-bottom: 0.5rem;
+    }
+}
