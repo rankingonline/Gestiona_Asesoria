@@ -395,6 +395,42 @@ p {
     border-color: var(--primary);
 }
 
+.checkbox-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem !important;
+}
+
+/* Specific selector to override input styles within checkbox-group */
+.checkbox-group input[type="checkbox"] {
+    width: auto !important;
+    display: inline-block;
+    margin: 0;
+    cursor: pointer;
+    flex-shrink: 0;
+    box-shadow: none;
+}
+
+.checkbox-group label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    margin: 0;
+    text-align: left;
+}
+
+.checkbox-group a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.checkbox-group a:hover {
+    text-decoration: underline;
+}
+
 /* Footer */
 .main-footer {
     background: var(--text-main);
@@ -458,15 +494,20 @@ p {
 /* Contact Items */
 .footer-contact li {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    /* Align to top for multi-line text */
     gap: 0.8rem;
     color: rgba(255, 255, 255, 0.7);
 }
 
 .footer-contact li svg {
-    width: 18px;
-    height: 18px;
+    width: 24px;
+    height: 24px;
     color: var(--primary);
+    flex-shrink: 0;
+    /* Prevent icon from shrinking */
+    margin-top: 3px;
+    /* Optical alignment with text */
 }
 
 /* Socials */
