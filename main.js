@@ -1,4 +1,5 @@
-import './style.css'
+// import './style.css' - Removed for vanilla JS compatibility
+
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('Gestiona Asesoría App Loaded');
