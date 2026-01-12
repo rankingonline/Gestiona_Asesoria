@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asesoría Laboral - Gestiona Asesoría</title>
+    <meta name="description" content="Asesoría laboral para empresas en Huelva.">
+    <link rel="stylesheet" href="../../shared/css/global.css">
+    <link rel="stylesheet" href="./asesoria-laboral.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../home/index.html">
+                    <img src="../../../images/gestiona logo.svg" alt="Gestiona Asesoría" class="logo-img">
+                </a>
+            </div>
+
+            <!-- Desktop Nav Links -->
+            <div class="nav-links">
+                <a href="../home/index.html">Inicio</a>
+                <a href="../asesoria-fiscal/index.html">Asesoría Fiscal</a>
+                <a href="../asesoria-empresas/index.html">Asesoría Empresas</a>
+                <a href="../asesoria-contable/index.html">Asesoría Contable</a>
+                <a href="./index.html" class="active">Asesoría Laboral</a>
+                <a href="../nosotros/index.html">Nosotros</a>
+                <a href="../home/index.html#contact" class="btn btn-primary small">Contacto</a>
+            </div>
+
+            <!-- Mobile Actions -->
+            <div class="mobile-actions">
+                <a href="tel:+34959531100" class="call-button" aria-label="Llamar">
+                    <i data-lucide="phone"></i>
+                </a>
+                <button class="hamburger-menu" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay">
+            <div class="mobile-menu-content">
+                <button class="close-menu" aria-label="Cerrar menú">
+                    <i data-lucide="x"></i>
+                </button>
+                <nav class="mobile-nav">
+                    <a href="../home/index.html">Inicio</a>
+                    <a href="../asesoria-fiscal/index.html">Asesoría Fiscal</a>
+                    <a href="../asesoria-empresas/index.html">Asesoría Empresas</a>
+                    <a href="../asesoria-contable/index.html">Asesoría Contable</a>
+                    <a href="./index.html" class="active">Asesoría Laboral</a>
+                    <a href="../nosotros/index.html">Nosotros</a>
+                    <a href="../home/index.html#contact" class="btn btn-primary">Contacto</a>
+                </nav>
+            </div>
+        </div>
+
+        <main class="page-content">
+            <!-- Hero Section -->
+            <section class="about-hero">
+                <div class="container">
+                    <div class="about-hero-grid">
+                        <div class="text-block">
+                            <div class="tag-holder left-align">
+                                <span class="badge-pill">Asesoría Laboral en Huelva</span>
+                            </div>
+                            <h1>Asesoría laboral en Huelva para <span class="highlight">negocios del campo</span></h1>
+                            <p class="lead">
+                                Gestionar trabajadores en el campo <strong>no es solo contratar y dar de alta</strong>.
+                                Es saber cómo manejar los picos de actividad, cumplir con la normativa y evitar sustos
+                                cuando llega una inspección.
+                            </p>
+                            <p class="lead">
+                                En <a href="../home/index.html" class="text-link">Gestiona</a>, ofrecemos
+                                <strong>asesoría laboral en Huelva</strong> adaptada a empresas agrícolas y cooperativas
+                                que necesitan agilidad, claridad y soporte de verdad.
+                            </p>
+                            <div class="about-cta-wrapper">
+                                <a href="http://gestionarme.es/#contacto" class="btn btn-primary">Revisar la gestión
+                                    laboral de mi empresa</a>
+                            </div>
+                        </div>
+                        <div class="hero-group-image placeholder-bg">
+                            <!-- Placeholder for image -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Laboral Points Section -->
+            <section class="section laboral-points-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Mano de obra, campañas y cumplimiento: <span class="highlight">todo alineado</span></h2>
+                        <p class="lead">
+                            Si tienes trabajadores en el campo, sabes que los problemas laborales no esperan a final de
+                            mes. Nosotros trabajamos contigo para que tengas:
+                        </p>
+                    </div>
+
+                    <div class="points-grid">
+                        <!-- Point 1 -->
+                        <div class="point-card">
+                            <div class="icon-circle large">
+                                <i data-lucide="file-text"></i>
+                            </div>
+                            <p><strong>Contratos bien hechos</strong> desde el primer día.</p>
+                        </div>
+
+                        <!-- Point 2 -->
+                        <div class="point-card">
+                            <div class="icon-circle large">
+                                <i data-lucide="users"></i>
+                            </div>
+                            <p><strong>Altas, bajas y variaciones</strong> bien tramitadas y en plazo.</p>
+                        </div>
+
+                        <!-- Point 3 -->
+                        <div class="point-card">
+                            <div class="icon-circle large">
+                                <i data-lucide="shield"></i>
+                            </div>
+                            <p><strong>Apoyo real</strong> ante inspecciones o conflictos laborales.</p>
+                        </div>
+
+                        <!-- Point 4 -->
+                        <div class="point-card">
+                            <div class="icon-circle large">
+                                <i data-lucide="folder"></i>
+                            </div>
+                            <p><strong>Gestión de todo el papeleo</strong> de Seguridad Social.</p>
+                        </div>
+
+                        <!-- Point 5 -->
+                        <div class="point-card">
+                            <div class="icon-circle large">
+                                <i data-lucide="activity"></i>
+                            </div>
+                            <p><strong>Seguimiento activo</strong> de cada movimiento, sin que tengas que pedirlo.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Form Section -->
+            <section class="section collaboration-section" id="contacto">
+                <div class="container">
+                    <div class="split-layout">
+                        <div class="text-content">
+                            <h2>¿Tienes el control de tu plantilla? <span class="highlight">Te ayudamos a
+                                    recuperarlo</span></h2>
+                            <p class="lead">Deja de apagar fuegos laborales y empieza a gestionar con tranquilidad.
+                                Solicita una revisión gratuita de tu situación laboral actual.</p>
+                        </div>
+                        <div class="form-content">
+                            <div class="contact-box">
+                                <h3>Hablemos de tu equipo</h3>
+                                <form class="styled-form">
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Nombre completo" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="tel" placeholder="Teléfono" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" placeholder="Correo electrónico" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea rows="4"
+                                            placeholder="Cuéntanos brevemente tu situación (nº trabajadores, sector...)"></textarea>
+                                    </div>
+                                    <div class="checkbox-group">
+                                        <input type="checkbox" id="privacy-policy" required>
+                                        <label for="privacy-policy">He leído y acepto la <a href="#">política de
+                                                privacidad</a></label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary full-width">Enviar consulta</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Problems vs Solutions Section -->
+            <section class="section problems-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Problemas que vemos a diario y <span class="highlight">evitamos</span></h2>
+                    </div>
+                    <div class="problems-grid">
+                        <!-- Problem 1 -->
+                        <div class="problem-card">
+                            <div class="problem-header">
+                                <h4>Contratos temporales mal redactados</h4>
+                            </div>
+                            <div class="problem-connector">
+                                <div class="problem-connector-icon"><i data-lucide="arrow-down"></i></div>
+                            </div>
+                            <div class="solution-body">
+                                <p>Evitamos sanciones y conflictos. Usamos modelos ajustados a tu sector.</p>
+                            </div>
+                        </div>
+
+                        <!-- Problem 2 -->
+                        <div class="problem-card">
+                            <div class="problem-header">
+                                <h4>Altas y bajas fuera de plazo</h4>
+                            </div>
+                            <div class="problem-connector">
+                                <div class="problem-connector-icon"><i data-lucide="arrow-down"></i></div>
+                            </div>
+                            <div class="solution-body">
+                                <p>Todo se gestiona en tiempo, sin retrasos ni olvidos.</p>
+                            </div>
+                        </div>
+
+                        <!-- Problem 3 -->
+                        <div class="problem-card">
+                            <div class="problem-header">
+                                <h4>Falta de justificantes y documentación</h4>
+                            </div>
+                            <div class="problem-connector">
+                                <div class="problem-connector-icon"><i data-lucide="arrow-down"></i></div>
+                            </div>
+                            <div class="solution-body">
+                                <p>Organizamos todo lo necesario para que esté disponible si lo necesitas.</p>
+                            </div>
+                        </div>
+
+                        <!-- Problem 4 -->
+                        <div class="problem-card">
+                            <div class="problem-header">
+                                <h4>Desconocimiento sobre convenios</h4>
+                            </div>
+                            <div class="problem-connector">
+                                <div class="problem-connector-icon"><i data-lucide="arrow-down"></i></div>
+                            </div>
+                            <div class="solution-body">
+                                <p>Te asesoramos en cada decisión, con claridad y sin tecnicismos.</p>
+                            </div>
+                        </div>
+
+                        <!-- Problem 5 -->
+                        <div class="problem-card">
+                            <div class="problem-header">
+                                <h4>Sorpresas en inspecciones</h4>
+                            </div>
+                            <div class="problem-connector">
+                                <div class="problem-connector-icon"><i data-lucide="arrow-down"></i></div>
+                            </div>
+                            <div class="solution-body">
+                                <p>Te preparamos con antelación y te acompañamos si hay visita o requerimiento.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services List Section -->
+            <section class="section laboral-services-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Nuestros servicios laborales en Huelva</h2>
+                    </div>
+                    <div class="services-grid-list">
+                        <!-- Item 1 -->
+                        <div class="service-item-card">
+                            <div class="service-icon-box">
+                                <i data-lucide="file-check"></i>
+                            </div>
+                            <div>
+                                <h3>Cumplimiento Formal</h3>
+                                <p>Nos encargamos de toda la parte formal y legal para que esté al día.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="service-item-card">
+                            <div class="service-icon-box">
+                                <i data-lucide="building-2"></i>
+                            </div>
+                            <div>
+                                <h3>Seguridad Social y SEPE</h3>
+                                <p>Gestiones y trámites directos con Seguridad Social y servicios de empleo.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="service-item-card">
+                            <div class="service-icon-box">
+                                <i data-lucide="shield-alert"></i>
+                            </div>
+                            <div>
+                                <h3>Asistencia en Inspecciones</h3>
+                                <p>Asistencia y defensa ante inspecciones de trabajo o requerimientos.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="service-item-card">
+                            <div class="service-icon-box">
+                                <i data-lucide="calendar-clock"></i>
+                            </div>
+                            <div>
+                                <h3>Control de Plazos</h3>
+                                <p>Control riguroso de vencimientos de contratos y renovaciones.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 5 -->
+                        <div class="service-item-card">
+                            <div class="service-icon-box">
+                                <i data-lucide="sprout"></i>
+                            </div>
+                            <div>
+                                <h3>Normativa Agraria</h3>
+                                <p>Asesoramiento especializado en normativa agraria y convenios del campo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Other Services Section -->
+            <section class="section other-services-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Otros servicios que completan tu gestión</h2>
+                    </div>
+                    <div class="other-services-grid">
+                        <!-- Fiscal -->
+                        <div class="other-service-card">
+                            <div class="service-icon-box">
+                                <i data-lucide="calculator"></i>
+                            </div>
+                            <h3>Asesoría Fiscal</h3>
+                            <p>Planificación fiscal, presentación de modelos y acompañamiento para evitar sustos.</p>
+                            <a href="../asesoria-fiscal/index.html" class="btn btn-primary small">Ver servicio</a>
+                        </div>
+
+                        <!-- Contable -->
+                        <div class="other-service-card">
+                            <div class="service-icon-box">
+                                <i data-lucide="bar-chart-3"></i>
+                            </div>
+                            <h3>Asesoría Contable</h3>
+                            <p>Balance claro, seguimiento mensual y documentación lista para decisiones o financiación.
+                            </p>
+                            <a href="../asesoria-contable/index.html" class="btn btn-primary small">Ver servicio</a>
+                        </div>
+
+                        <!-- Empresas Campo -->
+                        <div class="other-service-card">
+                            <div class="service-icon-box">
+                                <i data-lucide="briefcase"></i>
+                            </div>
+                            <h3>Asesoría para empresas del campo</h3>
+                            <p>Soluciones completas para empresas agrícolas: laboral, fiscal y contable.</p>
+                            <a href="../asesoria-empresas/index.html" class="btn btn-primary small">Ver servicio</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Location Section -->
+            <section class="section location-section">
+                <div class="container">
+                    <div class="location-grid">
+                        <!-- Left: Info -->
+                        <div class="location-info">
+                            <h2>Ven a vernos o llámanos <span class="highlight">cuando quieras</span></h2>
+                            <p class="lead">
+                                Estamos en Palos de la Frontera, trabajando con empresas como la tuya. Nos gusta que
+                                puedas venir o que nos llames directamente.
+                            </p>
+
+                            <div class="contact-list">
+                                <div class="contact-row">
+                                    <div class="icon-box"><i data-lucide="map-pin"></i></div>
+                                    <div>
+                                        <h3>Dirección</h3>
+                                        <p>Oficinas en el Polígono San Jorge, Palos de la Frontera (Huelva)</p>
+                                        <a href="https://maps.google.com/?q=Pg.+Industrial+San+Jorge+P-15+21810+Palos+de+la+Frontera+(Huelva)"
+                                            target="_blank" class="text-link">Ver en Google Maps</a>
+                                    </div>
+                                </div>
+
+                                <div class="contact-row">
+                                    <div class="icon-box"><i data-lucide="phone"></i></div>
+                                    <div>
+                                        <h3>Teléfonos</h3>
+                                        <p class="phones-list">
+                                            <a href="tel:959531100">959 531 100</a>
+                                            <span class="separator">|</span>
+                                            <a href="tel:639111245">639 111 245</a>
+                                            <span class="separator">|</span>
+                                            <a href="tel:625656614">625 656 614</a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="contact-row">
+                                    <div class="icon-box"><i data-lucide="clock"></i></div>
+                                    <div>
+                                        <h3>Horario</h3>
+                                        <p>Lunes a jueves de 9:00 a 18:00 y viernes de 9:00 a 14:00</p>
+                                    </div>
+                                </div>
+
+                                <div class="cta-wrapper">
+                                    <a href="#contacto" class="btn btn-primary">Escríbenos o agenda una llamada</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right: Map -->
+                        <div class="location-map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12759.088661793746!2d-6.899444!3d37.228889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd11cf96576e66c7%3A0x40463fd8ca1c6c0!2sPalos%20de%20la%20Frontera%2C%20Huelva!5e0!3m2!1ses!2ses!4v1709664654763!5m2!1ses!2ses"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reviews Section -->
+            <section class="section reviews-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Casos reales de clientes que <span class="highlight">confían en Gestiona</span></h2>
+                        <p class="lead">Empresas del campo, cooperativas y negocios de la zona ya confían en nosotros
+                            para llevar su parte laboral con orden.</p>
+                    </div>
+
+                    <div class="reviews-grid">
+                        <!-- Review 1 -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-avatar" style="background-color: #e57373;">M</div>
+                                <div class="reviewer-info">
+                                    <h4>Manuel González</h4>
+                                    <div class="stars">★★★★★</div>
+                                </div>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                                    alt="Google" class="google-logo">
+                            </div>
+                            <p class="review-text">"Llevo años con ellos y la tranquilidad que me dan no tiene precio.
+                                Conocen el campo mejor que nadie y siempre están ahí cuando surge un imprevisto con
+                                algún trabajador."</p>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-avatar" style="background-color: #4db6ac;">R</div>
+                                <div class="reviewer-info">
+                                    <h4>Rocío M.</h4>
+                                    <div class="stars">★★★★★</div>
+                                </div>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                                    alt="Google" class="google-logo">
+                            </div>
+                            <p class="review-text">"Profesionalidad y cercanía. Me ayudaron a poner en orden todos los
+                                contratos de la campaña. Muy recomendables."</p>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-avatar" style="background-color: #ba68c8;">A</div>
+                                <div class="reviewer-info">
+                                    <h4>Antonio Ruiz</h4>
+                                    <div class="stars">★★★★★</div>
+                                </div>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                                    alt="Google" class="google-logo">
+                            </div>
+                            <p class="review-text">"El trato es excelente. Te explican las cosas claras y sin
+                                tecnicismos. Se nota que les importa tu negocio."</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Final CTA Section -->
+            <section class="section final-cta-section">
+                <div class="container relative">
+                    <div class="final-cta-card">
+                        <div class="cta-content">
+                            <h2>Tu plantilla también <span class="highlight">merece una buena gestión</span></h2>
+                            <p class="lead">Cuando el papeleo está resuelto y el riesgo bajo control, puedes centrarte
+                                en lo importante. Nosotros nos encargamos del resto a través de nuestra asesoría laboral
+                                en Huelva.</p>
+                            <a href="#contacto" class="btn btn-primary"
+                                style="background: white; color: var(--text-main); border: none;">Revisar mi situación
+                                laboral con Gestiona</a>
+                        </div>
+                        <div class="cta-logo">
+                            <img src="../../../images/gestiona-white-text.svg" alt="Gestiona Logo">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="section faq-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Preguntas frecuentes sobre nuestra <span class="highlight">asesoría laboral en Huelva</span>
+                        </h2>
+                    </div>
+                    <div class="faq-wrapper">
+                        <!-- Q1 -->
+                        <div class="faq-item">
+                            <button class="faq-trigger" aria-expanded="false">
+                                <span class="faq-question">¿Cuánto cuesta un servicio laboral para una empresa
+                                    agrícola?</span>
+                                <i data-lucide="chevron-down" class="faq-icon"></i>
+                            </button>
+                            <div class="faq-content">
+                                <div class="faq-answer">
+                                    <p>El precio depende del número de trabajadores, tipo de actividad y necesidades
+                                        puntuales. En la primera llamada te damos una estimación clara y sin compromiso.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Q2 -->
+                        <div class="faq-item">
+                            <button class="faq-trigger" aria-expanded="false">
+                                <span class="faq-question">¿Podéis hacer los contratos y las altas por mí?</span>
+                                <i data-lucide="chevron-down" class="faq-icon"></i>
+                            </button>
+                            <div class="faq-content">
+                                <div class="faq-answer">
+                                    <p>Sí. Nos encargamos de todo el proceso, desde la redacción hasta el alta en
+                                        Seguridad Social y el SEPE.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Q3 -->
+                        <div class="faq-item">
+                            <button class="faq-trigger" aria-expanded="false">
+                                <span class="faq-question">¿Trabajáis también con trabajadores de campaña
+                                    extranjera?</span>
+                                <i data-lucide="chevron-down" class="faq-icon"></i>
+                            </button>
+                            <div class="faq-content">
+                                <div class="faq-answer">
+                                    <p>Sí. Conocemos los requisitos específicos y gestionamos todo lo relacionado con
+                                        permisos y contrataciones temporales.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Q4 -->
+                        <div class="faq-item">
+                            <button class="faq-trigger" aria-expanded="false">
+                                <span class="faq-question">¿Y si ya tengo una gestoría pero quiero cambiar?</span>
+                                <i data-lucide="chevron-down" class="faq-icon"></i>
+                            </button>
+                            <div class="faq-content">
+                                <div class="faq-answer">
+                                    <p>Te ayudamos con el traspaso sin interrumpir el servicio. Revisamos todo lo
+                                        anterior y corregimos lo necesario.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Q5 -->
+                        <div class="faq-item">
+                            <button class="faq-trigger" aria-expanded="false">
+                                <span class="faq-question">¿Este servicio incluye asesoramiento si tengo dudas con algún
+                                    trabajador?</span>
+                                <i data-lucide="chevron-down" class="faq-icon"></i>
+                            </button>
+                            <div class="faq-content">
+                                <div class="faq-answer">
+                                    <p>Sí. Puedes llamarnos cuando lo necesites y te orientamos sin coste adicional por
+                                        cada consulta.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="main-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Brand Column -->
+                    <div class="footer-col brand-col">
+                        <div class="logo footer-logo highlight-logo">
+                            <img src="../../../images/gestiona-white-text.svg" alt="Gestiona Asesoría Logo"
+                                class="footer-logo-img">
+                        </div>
+                        <p class="footer-desc">Tu tranquilidad laboral y administrativa en Huelva.</p>
+                    </div>
+
+                    <!-- Links Column -->
+                    <div class="footer-col links-col">
+                        <h4>Enlaces Rápidos</h4>
+                        <ul>
+                            <li><a href="../home/index.html">Inicio</a></li>
+                            <li><a href="../asesoria-fiscal/index.html">Asesoría Fiscal</a></li>
+                            <li><a href="../asesoria-empresas/index.html">Asesoría Empresas</a></li>
+                            <li><a href="../asesoria-contable/index.html">Asesoría Contable</a></li>
+                            <li><a href="./index.html">Asesoría Laboral</a></li>
+                            <li><a href="../nosotros/index.html">Nosotros</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Column -->
+                    <div class="footer-col contact-col">
+                        <h4>Contacto</h4>
+                        <ul class="contact-list">
+                            <li>
+                                <i data-lucide="map-pin"></i>
+                                <span>Av. del Gato, 4, 1 B, 21810<br>Palos de la Frontera, Huelva</span>
+                            </li>
+                            <li>
+                                <i data-lucide="mail"></i>
+                                <span>info@gestiona-asesoria.com</span>
+                            </li>
+                            <li>
+                                <i data-lucide="phone"></i>
+                                <span>959 531 100</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Gestiona Asesoría. Todos los derechos reservados.</p>
+                    <div class="legal-links">
+                        <a href="#">Aviso Legal</a>
+                        <a href="#">Privacidad</a>
+                        <a href="#">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script type="module" src="./asesoria-laboral.js"></script>
+    <script>
+        // Force icon creation and handle FAQ accordion
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) {
+                window.lucide.createIcons();
+            }
+
+            // FAQ Accordion Handler (Standard)
+            const faqContainer = document.querySelector('.faq-wrapper');
+            if (faqContainer) {
+                faqContainer.addEventListener('click', (e) => {
+                    const trigger = e.target.closest('.faq-trigger');
+                    if (trigger) {
+                        e.preventDefault();
+                        const item = trigger.closest('.faq-item');
+                        const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+
+                        trigger.setAttribute('aria-expanded', !isExpanded);
+
+                        if (item) {
+                            item.classList.toggle('active');
+                        }
+
+                        // Re-render icons after state change
+                        if (window.lucide) {
+                            window.lucide.createIcons();
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
