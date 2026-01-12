@@ -9,6 +9,7 @@ export default defineConfig({
                 main: resolve(__dirname, 'src/pages/home/index.html'),
                 nosotros: resolve(__dirname, 'src/pages/nosotros/index.html'),
                 asesoria: resolve(__dirname, 'src/pages/asesoria-fiscal/index.html'),
+                empresas: resolve(__dirname, 'src/pages/asesoria-empresas/index.html'),
             },
         },
     },
