@@ -743,8 +743,14 @@
                 faqContainer.addEventListener('click', (e) => {
                     const trigger = e.target.closest('.faq-trigger');
                     if (trigger) {
+                        e.preventDefault();
+                        const item = trigger.closest('.faq-item');
                         const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
                         trigger.setAttribute('aria-expanded', !isExpanded);
+
+                        if (item) {
+                            item.classList.toggle('active');
+                        }
                     }
                 });
             }

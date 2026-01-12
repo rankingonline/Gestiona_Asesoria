@@ -1047,7 +1047,9 @@
     transition: transform 0.3s ease;
 }
 
-.faq-trigger[aria-expanded="true"] .faq-icon {
+
+.faq-trigger[aria-expanded="true"] .faq-icon,
+.faq-item.active .faq-trigger .faq-icon {
     transform: rotate(180deg);
 }
 
@@ -1057,7 +1059,8 @@
     transition: grid-template-rows 0.4s ease-out;
 }
 
-.faq-trigger[aria-expanded="true"]+.faq-content {
+.faq-trigger[aria-expanded="true"]+.faq-content,
+.faq-item.active .faq-content {
     grid-template-rows: 1fr;
 }
 
