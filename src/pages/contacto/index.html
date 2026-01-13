@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto - Gestiona Asesoría</title>
+    <meta name="description"
+        content="Contacta con Gestiona Asesoría en Huelva. Expertos en fiscalidad, laboral y contabilidad para el sector agroalimentario.">
+    <link rel="stylesheet" href="../../shared/css/global.css?v=2">
+    <link rel="stylesheet" href="./contacto.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div id="app">
+
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../home/index.html">
+                    <img src="../../../images/gestiona logo.svg" alt="Gestiona Asesoría" class="logo-img">
+                </a>
+            </div>
+
+            <!-- Desktop Nav Links -->
+            <div class="nav-links">
+                <a href="../home/index.html">Inicio</a>
+                <a href="../asesoria-fiscal/index.html">Asesoría Fiscal</a>
+                <a href="../asesoria-empresas/index.html">Asesoría Empresas</a>
+                <a href="../asesoria-contable/index.html">Asesoría Contable</a>
+                <a href="../asesoria-laboral/index.html">Asesoría Laboral</a>
+                <a href="../nosotros/index.html">Nosotros</a>
+                <a href="./index.html" class="btn btn-primary small active">Contacto</a>
+            </div>
+
+            <!-- Mobile Actions -->
+            <div class="mobile-actions">
+                <a href="tel:959531100" class="call-button" aria-label="Llamar">
+                    <i data-lucide="phone"></i>
+                </a>
+                <button class="hamburger-menu" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay">
+            <div class="mobile-menu-content">
+                <button class="close-menu" aria-label="Cerrar menú">
+                    <i data-lucide="x"></i>
+                </button>
+                <nav class="mobile-nav">
+                    <a href="../home/index.html">Inicio</a>
+                    <a href="../asesoria-fiscal/index.html">Asesoría Fiscal</a>
+                    <a href="../asesoria-empresas/index.html">Asesoría Empresas</a>
+                    <a href="../asesoria-contable/index.html">Asesoría Contable</a>
+                    <a href="../asesoria-laboral/index.html">Asesoría Laboral</a>
+                    <a href="../nosotros/index.html">Nosotros</a>
+                    <a href="./index.html">Contacto</a>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="page-content">
+            <section class="contact-hero">
+                <div class="container">
+                    <div class="contact-hero-grid">
+                        <div class="hero-text-content">
+                            <h1>Contacta con una asesoría que te entiende desde el primer minuto</h1>
+
+                            <p class="contact-intro-text">
+                                En <a href="#" style="color: var(--primary); text-decoration: underline;">Gestiona</a>
+                                no necesitas venir con todo claro ni con los papeles en orden. Estamos aquí para
+                                <strong>ayudarte a entender tu situación, acompañarte en los próximos pasos y resolver
+                                    lo que ahora mismo te esté quitando tiempo o tranquilidad.</strong>
+                            </p>
+
+                            <p class="contact-intro-text">
+                                Somos una <strong>asesoría en Huelva especializada en empresas del campo</strong>,
+                                freseras, cooperativas y pymes que valoran la cercanía, la claridad y el acompañamiento
+                                real.
+                            </p>
+                        </div>
+
+                        <div class="hero-image-content">
+                            <div class="hero-group-image placeholder-bg">
+                                <!-- Image placeholder -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Form Section -->
+            <section class="section collaboration-section dark-alt">
+                <div class="watermark-container">
+                    <img src="../../../images/gestiona-icon.svg" alt="Gestiona Icon">
+                </div>
+                <div class="container">
+                    <div class="split-layout">
+                        <div class="text-content">
+                            <h2>Cuéntanos en qué punto estás. <span class="highlight">Nosotros te orientamos.</span>
+                            </h2>
+                            <p class="lead">
+                                No hace falta que sepas exactamente qué necesitas. <strong>Solo dinos a qué te dedicas y
+                                    cuál es tu preocupación principal.</strong>
+                            </p>
+                            <div class="highlight-box-text">
+                                Nosotros nos encargamos de ver cómo ayudarte.
+                            </div>
+                        </div>
+                        <div class="form-content">
+                            <div class="contact-box">
+                                <form id="contact-form-page" class="styled-form">
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Nombre" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" placeholder="Correo Electrónico" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="tel" placeholder="Teléfono" />
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea placeholder="¿En qué podemos ayudarte?" rows="4"></textarea>
+                                    </div>
+                                    <div class="checkbox-group">
+                                        <input type="checkbox" id="privacy-policy-contact" required />
+                                        <label for="privacy-policy-contact">He leído y acepto la <a href="#">política de
+                                                privacidad</a></label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary full-width">Enviar consulta</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Location Section -->
+            <section class="section location-section">
+                <div class="container">
+                    <div class="location-grid">
+                        <!-- Left: Info -->
+                        <div class="location-info">
+                            <h2>Estamos en Palos de la Frontera, <span class="highlight">cerca de ti</span></h2>
+                            <p class="lead">
+                                No somos una asesoría de grandes ciudades ni de respuestas automáticas. Nos gusta el
+                                trato
+                                directo y que nuestros clientes puedan contar con nosotros.
+                            </p>
+
+                            <div class="contact-list">
+                                <div class="contact-row">
+                                    <div class="icon-box"><i data-lucide="map-pin"></i></div>
+                                    <div>
+                                        <h3>Dirección</h3>
+                                        <p>Pg. Industrial San Jorge P-15 21810 Palos de la Frontera (Huelva)</p>
+                                        <a href="https://maps.google.com/?q=Pg.+Industrial+San+Jorge+P-15+21810+Palos+de+la+Frontera+(Huelva)"
+                                            target="_blank" class="text-link">Ver en Google Maps</a>
+                                    </div>
+                                </div>
+
+                                <div class="contact-row">
+                                    <div class="icon-box"><i data-lucide="phone"></i></div>
+                                    <div>
+                                        <h3>Teléfonos</h3>
+                                        <p class="phones-list">
+                                            <a href="tel:959531100">959 531 100</a>
+                                            <br>
+                                            <a href="tel:639111245">639 111 245</a> <span class="separator">|</span> <a
+                                                href="tel:625656614">625 656 614</a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="contact-row">
+                                    <div class="icon-box"><i data-lucide="clock"></i></div>
+                                    <div>
+                                        <h3>Horario</h3>
+                                        <p>Lunes a jueves: 9 a 18 h.<br>Viernes: 9 a 14 h.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Right: Map -->
+                        <div class="location-map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12759.088661793746!2d-6.899444!3d37.228889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd11cf96576e66c7%3A0x40463fd8ca1c6c0!2sPalos%20de%20la%20Frontera%2C%20Huelva!5e0!3m2!1ses!2ses!4v1709664654763!5m2!1ses!2ses"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section class="section testimonials-section bg-light">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <h2>Esto es lo que dicen quienes ya han <span class="highlight">trabajado con nosotros</span>
+                        </h2>
+                        <p class="subtitle max-w-800">
+                            Trabajamos con agricultores, cooperativas y empresas locales que quieren claridad en sus
+                            cuentas y
+                            tranquilidad en su día a día.
+                        </p>
+                    </div>
+
+                    <div class="reviews-grid">
+                        <!-- Review 1 -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-avatar" style="background-color: #e57373;">M</div>
+                                <div class="reviewer-info">
+                                    <h4>Manuel González</h4>
+                                    <div class="stars">★★★★★</div>
+                                </div>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                                    alt="Google" class="google-logo">
+                            </div>
+                            <p class="review-text">"Llevo años con ellos y la tranquilidad que me dan no tiene precio.
+                                Conocen el campo mejor que nadie y siempre están ahí cuando surge un imprevisto."</p>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-avatar" style="background-color: #4db6ac;">R</div>
+                                <div class="reviewer-info">
+                                    <h4>Rocío M.</h4>
+                                    <div class="stars">★★★★★</div>
+                                </div>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                                    alt="Google" class="google-logo">
+                            </div>
+                            <p class="review-text">"Profesionalidad y cercanía. Me ayudaron a reorganizar toda la
+                                contabilidad de la cooperativa. Muy recomendables."</p>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="reviewer-avatar" style="background-color: #ba68c8;">A</div>
+                                <div class="reviewer-info">
+                                    <h4>Antonio Ruiz</h4>
+                                    <div class="stars">★★★★★</div>
+                                </div>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                                    alt="Google" class="google-logo">
+                            </div>
+                            <p class="review-text">"El trato es excelente. Te explican las cosas claras y sin
+                                tecnicismos. Se nota que les importa tu negocio."</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Final CTA Section -->
+            <section class="section final-cta-section">
+                <div class="container">
+                    <div class="final-cta-card">
+                        <div class="cta-content">
+                            <h2>Resolver tus gestiones empieza con una <span class="highlight">conversación</span></h2>
+                            <p class="lead">
+                                Elige el canal que prefieras. Cuanto antes hablemos, antes podrás tomar decisiones con
+                                tranquilidad.
+                                <br>Nuestro objetivo es ayudarte.
+                            </p>
+                            <div class="mt-4">
+                                <a href="#contact-form-page" class="btn btn-primary btn-lg">Escríbenos o llama sin
+                                    compromiso</a>
+                            </div>
+                        </div>
+                        <div class="cta-logo">
+                            <img src="../../../images/gestiona-white-text.svg" alt="Gestiona Logo">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="main-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Brand Column -->
+                    <div class="footer-col brand-col">
+                        <div class="logo footer-logo highlight-logo">
+                            <img src="../../../images/gestiona-white-text.svg" alt="Gestiona Asesoría Logo"
+                                class="footer-logo-img">
+                        </div>
+                        <p class="footer-desc">Especialistas en el sector agroalimentario de Huelva. Tu tranquilidad
+                            fiscal y laboral es nuestra cosecha.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i data-lucide="linkedin"></i></a>
+                            <a href="#" class="social-link"><i data-lucide="facebook"></i></a>
+                            <a href="#" class="social-link"><i data-lucide="instagram"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Links Column -->
+                    <div class="footer-col">
+                        <h4>Navegación</h4>
+                        <ul class="footer-links">
+                            <li><a href="../home/index.html#services">Servicios</a></li>
+                            <li><a href="../nosotros/index.html">Nosotros</a></li>
+                            <li><a href="../home/index.html#errors">Errores Comunes</a></li>
+                            <li><a href="./index.html">Contacto</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Column -->
+                    <div class="footer-col">
+                        <h4>Contacto</h4>
+                        <ul class="footer-contact">
+                            <li>
+                                <i data-lucide="map-pin"></i>
+                                <span>Pg. Industrial San Jorge P-15 21810 Palos de la Frontera (Huelva)</span>
+                            </li>
+                            <li>
+                                <i data-lucide="mail"></i>
+                                <span>info@gestiona-asesoria.com</span>
+                            </li>
+                            <li>
+                                <i data-lucide="phone"></i>
+                                <span>959 531 100</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Gestiona Asesoría. Todos los derechos reservados.</p>
+                    <div class="legal-links">
+                        <a href="#">Aviso Legal</a>
+                        <a href="#">Privacidad</a>
+                        <a href="#">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script type="module" src="./contacto.js"></script>
+    <script>
+        // Fallback to ensure icons load
+        window.addEventListener('load', () => {
+            if (window.lucide) {
+                window.lucide.createIcons();
+            }
+        });
+    </script>
+</body>
+
+</html>
