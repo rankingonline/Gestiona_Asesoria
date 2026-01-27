@@ -34,66 +34,58 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // GSAP Hero Animations
+    // GSAP Impact Hero Animations
     if (typeof gsap !== 'undefined') {
         gsap.registerPlugin(ScrollTrigger);
 
-        // Initial Entrance Animation
-        const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+        const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
 
-        tl.from(".hero-badge", {
-            y: -20,
+        // Hero Entrance
+        tl.from(".hero-bg-shapes .shape", {
+            scale: 0,
             opacity: 0,
-            duration: 0.8,
-            delay: 0.2
+            duration: 1.5,
+            stagger: 0.2
         })
-            .to(".line-reveal", {
-                y: "0%",
-                duration: 1,
-                stagger: 0.15
-            }, "-=0.4")
-            .to(".hero-subtitle", {
-                y: 0,
-                opacity: 1,
-                duration: 0.8
+            .from(".hero-title-impact .block-reveal", {
+                y: 100,
+                opacity: 0,
+                duration: 1.2,
+                stagger: 0.15,
+                skewY: 5
+            }, "-=1")
+            .from(".hero-text-impact", {
+                y: 30,
+                opacity: 0,
+                duration: 1
+            }, "-=0.8")
+            .from(".hero-cta-group a", {
+                y: 20,
+                autoAlpha: 0,
+                duration: 0.8,
+                stagger: 0.1,
+                clearProps: "all" 
             }, "-=0.6")
-            .to(".hero-actions", {
-                y: 0,
-                opacity: 1,
-                duration: 0.8
+            .from(".trust-indicators-row", {
+                opacity: 0,
+                duration: 1
             }, "-=0.6")
-            .from(".main-image-mask", {
+            .from(".visual-card-stack", {
                 x: 50,
                 opacity: 0,
                 duration: 1.2
-            }, "-=1")
-            .from(".floating-card", {
-                y: 30,
-                opacity: 0,
-                stagger: 0.2,
-                duration: 0.8
-            }, "-=0.8");
+            }, "-=1");
 
-        // Parallax Effect on Mouse Move
-        const heroSection = document.querySelector('.hero-modern');
+        // Interactive Parallax
+        const heroSection = document.querySelector('.hero-impact');
         if (heroSection) {
             heroSection.addEventListener('mousemove', (e) => {
-                const x = (e.clientX / window.innerWidth - 0.5) * 20;
-                const y = (e.clientY / window.innerHeight - 0.5) * 20;
+                const x = (e.clientX / window.innerWidth - 0.5) * 30;
+                const y = (e.clientY / window.innerHeight - 0.5) * 30;
 
-                gsap.to(".hero-img-main", {
-                    x: x,
-                    y: y,
-                    duration: 1,
-                    ease: "power2.out"
-                });
-
-                gsap.to(".floating-card", {
-                    x: -x * 1.5,
-                    y: -y * 1.5,
-                    duration: 1.2,
-                    ease: "power2.out"
-                });
+                gsap.to(".shape-1", { x: x, y: y, duration: 2, ease: "power2.out" });
+                gsap.to(".shape-2", { x: -x, y: -y, duration: 2, ease: "power2.out" });
+                gsap.to(".card-main", { rotationY: x * 0.5, rotationX: -y * 0.5, duration: 1, ease: "power2.out" });
             });
         }
     }
