@@ -1823,6 +1823,196 @@
     transition: color 0.3s;
 }
 
+/* Final CTA Section */
+.final-cta-section {
+    position: relative;
+    z-index: 10;
+}
+
+.floating-cta-card {
+    background: var(--primary);
+    border-radius: 24px;
+    padding: 4rem;
+    box-shadow: 0 20px 60px rgba(240, 90, 26, 0.25);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cta-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 4rem;
+}
+
+.text-block {
+    flex: 1;
+}
+
+.text-block h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    color: white;
+}
+
+/* Ensure highlight text in H2 is also white or distinct */
+.text-block h2 .highlight {
+    color: white;
+    border-color: rgba(255, 255, 255, 0.5);
+    /* If using border */
+}
+
+.text-block p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.cta-highlight-text {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.cta-highlight-text strong {
+    color: white;
+}
+
+/* Button style override for CTA */
+.floating-cta-card .btn-primary {
+    background-color: white;
+    color: var(--primary);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.floating-cta-card .btn-primary:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.floating-cta-card {
+    background: var(--primary);
+    border-radius: 24px;
+    padding: 4rem;
+    box-shadow: 0 20px 60px rgba(240, 90, 26, 0.25);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    /* Contains the ripple */
+    position: relative;
+    animation: floatCard 6s ease-in-out infinite;
+}
+
+.cta-logo-wrapper {
+    flex: 0 0 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    position: relative;
+    /* Anchor for ripples */
+}
+
+/* Ripple Animation */
+.ripple-effect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    /* Behind logo */
+    pointer-events: none;
+}
+
+.ripple-effect span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: rippleWave 2s infinite linear;
+    opacity: 0;
+}
+
+.ripple-effect span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.ripple-effect span:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.ripple-effect span:nth-child(3) {
+    animation-delay: 4s;
+}
+
+.ripple-effect span:nth-child(4) {
+    animation-delay: 6s;
+}
+
+@keyframes rippleWave {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0.5;
+    }
+
+    100% {
+        width: 2000px;
+        /* Expands beyond card */
+        height: 2000px;
+        opacity: 0;
+    }
+}
+
+.cta-logo {
+    width: 100%;
+    height: auto;
+    filter: brightness(0) invert(1);
+    opacity: 1;
+    position: relative;
+    z-index: 1;
+    /* Above ripples */
+}
+
+/* Responsive CTA */
+@media (max-width: 900px) {
+    .floating-cta-card {
+        padding: 2rem;
+    }
+
+    .cta-content {
+        flex-direction: column-reverse;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .text-block p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cta-logo-wrapper {
+        flex: 0 0 100px;
+        width: 150px;
+    }
+}
+
 .link-google:hover {
     color: var(--primary);
 }
