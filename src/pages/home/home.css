@@ -1196,7 +1196,7 @@
    TRUST INTRO SECTION
    ========================================= */
 .trust-intro-section {
-    padding: 8rem 0;
+    padding: 6rem 0;
     /* Animated Gradient Background */
     background: var(--primary);
     color: white;
@@ -1525,7 +1525,7 @@
 
 /* Creative Reasons to Trust Section (Floating Cloud) */
 .reasons-section {
-    padding: 6rem 0;
+    padding: 2rem 0;
     background-color: white;
     /* Clean white background */
     /* overflow: hidden; Removed for sticky */
@@ -1645,7 +1645,7 @@
 
 /* Location Section */
 .location-section {
-    padding: 6rem 0;
+    padding: 2rem 0;
     background-color: var(--bg-card);
     /* Light grey/white depending on var */
 }
@@ -1715,7 +1715,7 @@
 /* Reviews Section Styles */
 .reviews-section {
     background-color: var(--bg-light);
-    padding: 6rem 0;
+    padding: 6rem 0 0rem;
 }
 
 .reviews-grid {
