@@ -1742,6 +1742,23 @@
     border-color: rgba(240, 90, 26, 0.2);
 }
 
+.reason-float-card .icon-box {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    background: rgba(240, 90, 26, 0.1);
+    color: var(--primary);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reason-float-card .icon-box svg {
+    stroke: var(--primary);
+    /* Enforce primary color on SVG stroke */
+}
+
 .service-card .service-icon {
     width: 50px;
     height: 50px;
@@ -1810,5 +1827,160 @@
 @media (max-width: 600px) {
     .services-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+
+/* Creative Reasons to Trust Section (Floating Cloud) */
+.reasons-section {
+    padding: 6rem 0;
+    background-color: white;
+    /* Clean white background */
+    /* overflow: hidden; Removed for sticky */
+}
+
+.reasons-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    align-items: start;
+    /* Changed to start for sticky to work */
+}
+
+/* Left: Header Styling */
+.reasons-header {
+    text-align: left;
+    position: sticky;
+    top: 150px;
+}
+
+.reasons-header h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.reasons-header .subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.decoration-line {
+    width: 60px;
+    height: 4px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+/* Right: Floating Cloud */
+.reasons-cloud-wrapper {
+    position: relative;
+    padding: 3rem 0;
+}
+
+.reasons-cloud {
+    position: relative;
+    height: 800px;
+    /* Increased height to ensure separation */
+    width: 100%;
+}
+
+.reason-float-card {
+    position: absolute;
+    background: white;
+    border-radius: 20px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: all 0.5s ease-in-out;
+    animation: floatCard 6s ease-in-out infinite;
+    max-width: 300px;
+    z-index: 1;
+}
+
+/* Positioning the Cards - Absolute Separation */
+
+/* Card 1: Top Left */
+.card-1 {
+    top: 0;
+    left: 0;
+}
+
+/* Card 2: Top Right (Lower) */
+.card-2 {
+    top: 15%;
+    right: 0;
+}
+
+/* Card 3: Center Left */
+.card-3 {
+    top: 40%;
+    left: 5%;
+    background: #fff;
+    border-color: rgba(0, 0, 0, 0.04);
+}
+
+/* Card 4: Center Right (Lower) */
+.card-4 {
+    top: 60%;
+    right: 5%;
+}
+
+/* Card 5: Bottom Center */
+.card-5 {
+    bottom: 0;
+    left: 20%;
+}
+
+/* Floating Animation */
+@keyframes floatCard {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .reasons-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .reasons-header {
+        text-align: center;
+    }
+
+    .reasons-header .decoration-line {
+        margin: 0 auto;
+    }
+
+    .reasons-cloud {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        /* Stack them on mobile */
+    }
+
+    .reason-float-card {
+        position: relative;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        max-width: 100%;
+        animation: none;
+        /* No floating on mobile for stability */
     }
 }
