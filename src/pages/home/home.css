@@ -1289,162 +1289,7 @@
     }
 }
 
-/* Profile Selection Section - Redesigned */
-.profile-section {
-    background: linear-gradient(-45deg, #f05a1a, #ff8c32, #d04a10, #e87c4d);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
-    padding: 4rem 0;
-    position: relative;
-    overflow: hidden;
-}
 
-.profile-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 3rem;
-    margin-top: 2.5rem;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Text color adjustments for orange background */
-.profile-section .section-header h2,
-.profile-section .section-header .subtitle {
-    color: white;
-}
-
-.profile-section .section-header .highlight {
-    color: white;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.profile-card {
-    background: white;
-    border-radius: 24px;
-    overflow: hidden;
-    /* Vertical flex layout */
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
-    /* Very subtle elegant shadow */
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
-    border: 1px solid white;
-    position: relative;
-    isolation: isolate;
-}
-
-/* Hover Effect: Lift up */
-.profile-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 30px 60px rgba(240, 90, 26, 0.15);
-    /* Orange atmospheric glow */
-    border-color: rgba(240, 90, 26, 0.2);
-}
-
-.profile-image {
-    width: 100%;
-    height: 200px;
-    /* Reduced height */
-    position: relative;
-    overflow: hidden;
-}
-
-.profile-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s ease;
-}
-
-/* Subtle orange overlay on image hover */
-.profile-image::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
-    opacity: 0.6;
-    transition: opacity 0.3s ease;
-}
-
-.profile-card:hover .profile-image img {
-    transform: scale(1.1);
-}
-
-.profile-content {
-    flex: 1;
-    /* Take remaining space */
-    padding: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* Center content */
-    text-align: center;
-}
-
-.profile-content h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    position: relative;
-    padding-bottom: 1rem;
-    color: var(--text-main);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* Orange underline for title */
-.profile-content h3::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 3px;
-    background: var(--primary);
-    border-radius: 2px;
-}
-
-.profile-desc {
-    font-size: 1rem;
-    color: var(--text-muted);
-    margin-bottom: 2rem;
-    min-height: 3rem;
-    /* Align lines even if text varies slightly */
-}
-
-.profile-features {
-    list-style: none;
-    margin-bottom: 2.5rem;
-    width: 100%;
-    text-align: left;
-    /* Keep features left-aligned for readability */
-    padding-left: 1rem;
-}
-
-.profile-features li {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    font-size: 0.95rem;
-    color: var(--text-main);
-}
-
-.profile-features li i {
-    color: var(--primary);
-    /* Orange Checkmarks - NO BLUE */
-    width: 20px;
-    height: 20px;
-    background: rgba(240, 90, 26, 0.1);
-    padding: 2px;
-    border-radius: 50%;
-}
 
 .btn-outline {
     background: transparent;
@@ -1659,4 +1504,122 @@
 /* On card hover, distinct effect on CTA */
 .creative-card:hover .service-link {
     color: var(--primary-hover);
+}
+
+/* =========================================
+   TRUST INTRO SECTION
+   ========================================= */
+.trust-intro-section {
+    padding: 8rem 0;
+    /* Animated Gradient Background */
+    background: linear-gradient(-45deg, #f05a1a, #ff8c32, #d04a10, #e87c4d);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: white;
+}
+
+.intro-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.intro-header h2 {
+    font-size: 3rem;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 0;
+    color: white;
+    font-weight: 700;
+}
+
+.highlight-white {
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.4);
+    text-underline-offset: 8px;
+}
+
+/* Card Grid */
+.intro-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+}
+
+.intro-card {
+    background: white;
+    /* Solid White */
+    border: none;
+    border-radius: 20px;
+    padding: 2.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.intro-card:hover {
+    transform: translateY(-5px);
+    background: white;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon-white {
+    width: 60px;
+    height: 60px;
+    background: var(--primary);
+    /* Primary Background */
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    /* White Icon */
+}
+
+.card-icon-white svg {
+    width: 32px;
+    height: 32px;
+}
+
+.intro-card p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--text-main);
+    /* Dark Text */
+    margin: 0;
+    font-weight: 400;
+}
+
+.intro-card strong {
+    font-weight: 700;
+    color: var(--text-main);
+    /* Dark Strong Text */
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .trust-intro-section {
+        padding: 5rem 0;
+    }
+
+    .intro-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .intro-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .intro-card {
+        padding: 2rem;
+    }
 }
