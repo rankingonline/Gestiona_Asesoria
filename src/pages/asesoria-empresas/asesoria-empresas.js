@@ -1,5 +1,3 @@
-// Scripts for Asesoría Empresas
-import '../../shared/css/global.css';
 import '../../shared/js/global.js';
 
 console.log('Asesoría Empresas page loaded');

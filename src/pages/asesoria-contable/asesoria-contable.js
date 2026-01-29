@@ -1,5 +1,3 @@
-// Scripts for Asesoría Contable
-import '../../shared/css/global.css';
 import '../../shared/js/global.js';
 
 console.log('Asesoría Contable page loaded');
