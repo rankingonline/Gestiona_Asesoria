@@ -11,15 +11,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Initialize Lucide Icons
-    if (window.lucide) {
-        window.lucide.createIcons();
-    } else {
-        // Retry if lucide not yet loaded
-        setTimeout(() => {
-            if (window.lucide) window.lucide.createIcons();
-        }, 100);
-    }
+    // Initialize Lucide Icons with robust polling
+    const initIcons = () => {
+        if (window.lucide) {
+            window.lucide.createIcons();
+        } else {
+            // Poll for Lucide availability every 100ms for up to 3 seconds
+            let attempts = 0;
+            const interval = setInterval(() => {
+                if (window.lucide) {
+                    window.lucide.createIcons();
+                    clearInterval(interval);
+                }
+                attempts++;
+                if (attempts > 30) clearInterval(interval);
+            }, 100);
+        }
+    };
+    initIcons();
 
     // Navbar scroll glassmorphism effect
     const navbar = document.querySelector('.navbar');

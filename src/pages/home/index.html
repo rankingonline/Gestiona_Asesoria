@@ -129,7 +129,10 @@
       <div class="hero-visual-impact">
         <div class="visual-card-stack">
           <div class="card-main">
-            <img src="../../../images/hero-bg-new.png" alt="Equipo Gestiona" class="img-impact">
+            <div class="placeholder-bg"
+              style="width: 100%; height: 100%; min-height: 400px; background-color: #f0f0f0; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #888;">
+              <p>Imagen Hero</p>
+            </div>
           </div>
           <!-- Floating Stats Card -->
           <div class="float-stat glass-panel">
@@ -342,7 +345,10 @@
         <!-- Image Left -->
         <div class="image-content">
           <div class="image-wrapper rounded-shadow">
-            <img src="../../../images/team-working.png" alt="Asesoría agrícola en Huelva" class="img-responsive">
+            <div class="placeholder-bg"
+              style="width: 100%; height: 400px; background-color: #f0f0f0; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #888;">
+              <p>Imagen Equipo</p>
+            </div>
           </div>
         </div>
 
@@ -449,7 +455,7 @@
 
             <div class="contact-item">
               <div class="icon-box"><i data-lucide="clock"></i></div>
-              <p>Lunes a jueves de 9 a 18 h.<br>Viernes de 9 a 14 h.</p>
+              <p>Lunes a viernes<br>8:00 a 15:00</p>
             </div>
           </div>
         </div>
@@ -664,6 +670,27 @@
 
   </div>
   <script type="module" src="./home.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Robust polling for Lucide
+      const initIcons = () => {
+        if (window.lucide) {
+          window.lucide.createIcons();
+        } else {
+          let attempts = 0;
+          const interval = setInterval(() => {
+            if (window.lucide) {
+              window.lucide.createIcons();
+              clearInterval(interval);
+            }
+            attempts++;
+            if (attempts > 30) clearInterval(interval);
+          }, 100);
+        }
+      };
+      initIcons();
+    });
+  </script>
 </body>
 
 </html>

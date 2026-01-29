@@ -196,7 +196,7 @@
                                     <div class="icon-box"><i data-lucide="clock"></i></div>
                                     <div>
                                         <h3>Horario</h3>
-                                        <p>Lunes a jueves: 9 a 18 h.<br>Viernes: 9 a 14 h.</p>
+                                        <p>Lunes a viernes<br>8:00 a 15:00</p>
                                     </div>
                                 </div>
                             </div>
@@ -366,9 +366,23 @@
     <script>
         // Fallback to ensure icons load
         window.addEventListener('load', () => {
-            if (window.lucide) {
-                window.lucide.createIcons();
-            }
+            // Robust polling for Lucide
+            const initIcons = () => {
+                if (window.lucide) {
+                    window.lucide.createIcons();
+                } else {
+                    let attempts = 0;
+                    const interval = setInterval(() => {
+                        if (window.lucide) {
+                            window.lucide.createIcons();
+                            clearInterval(interval);
+                        }
+                        attempts++;
+                        if (attempts > 30) clearInterval(interval);
+                    }, 100);
+                }
+            };
+            initIcons();
         });
     </script>
 </body>

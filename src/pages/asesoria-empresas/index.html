@@ -417,7 +417,7 @@
                                     <div class="icon-box"><i data-lucide="clock"></i></div>
                                     <div>
                                         <h3>Horario</h3>
-                                        <p>Lunes a jueves de 9:00 a 18:00 y viernes de 9:00 a 14:00</p>
+                                        <p>Lunes a viernes<br>8:00 a 15:00</p>
                                     </div>
                                 </div>
 
@@ -706,9 +706,23 @@
     <script>
         // Force icon creation and handle FAQ accordion
         document.addEventListener('DOMContentLoaded', () => {
-            if (window.lucide) {
-                window.lucide.createIcons();
-            }
+            // Robust polling for Lucide
+            const initIcons = () => {
+                if (window.lucide) {
+                    window.lucide.createIcons();
+                } else {
+                    let attempts = 0;
+                    const interval = setInterval(() => {
+                        if (window.lucide) {
+                            window.lucide.createIcons();
+                            clearInterval(interval);
+                        }
+                        attempts++;
+                        if (attempts > 30) clearInterval(interval);
+                    }, 100);
+                }
+            };
+            initIcons();
 
             // FAQ Accordion Handler
             const faqContainer = document.querySelector('.faq-wrapper');
