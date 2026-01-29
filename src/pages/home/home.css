@@ -601,6 +601,28 @@
     height: 20px;
 }
 
+/* Focus Section */
+.focus-section {
+    padding: 6rem 0;
+    overflow: hidden;
+}
+
+.focus-section .split-layout {
+    align-items: center;
+}
+
+.focus-section .image-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.focus-section .img-responsive {
+    width: 100%;
+    display: block;
+}
+
 /* Value Proposition */
 .split-layout {
     display: grid;
@@ -1314,7 +1336,7 @@
     background: linear-gradient(-45deg, #fff5f2, #ffbfa4, #ffffff, #ffeae1);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
-    color: white;
+    color: var(--text-main);
 }
 
 .home-contact-section .contact-layout {
@@ -2019,15 +2041,17 @@
 
 /* Responsive */
 @media (max-width: 900px) {
+
+    /* Reasons Section Fixes */
     .reasons-layout {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
 
-    /* ... rest of existing responsive code ... */
-
     .reasons-header {
         text-align: center;
+        position: static;
+        /* Stop sticky behavior */
     }
 
     .reasons-header .decoration-line {
@@ -2039,7 +2063,7 @@
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
-        /* Stack them on mobile */
+        padding-top: 0;
     }
 
     .reason-float-card {
@@ -2050,6 +2074,95 @@
         bottom: auto !important;
         max-width: 100%;
         animation: none;
-        /* No floating on mobile for stability */
+    }
+
+    /* Focus Section Responsive */
+    .focus-section .split-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .focus-section .image-wrapper {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    /* Value/Solutions Section Fixes */
+    .value-section .split-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .value-section .text-content p {
+        text-align: justify;
+    }
+
+    /* Location Section Fixes */
+    .location-section .split-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .location-section .text-content {
+        text-align: center;
+    }
+
+    .location-section .contact-details {
+        align-items: center;
+        /* Center flex items */
+    }
+
+    .location-section .contact-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .location-section .contact-item .icon-box {
+        margin-bottom: 0.5rem;
+    }
+
+    /* Final CTA Fixes */
+    .final-cta-section {
+        overflow: hidden;
+        /* Prevent horizontal overflow */
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .floating-cta-card {
+        padding: 2.5rem 1.5rem;
+        width: 100%;
+        margin: 0;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(240, 90, 26, 0.2);
+    }
+
+    .cta-content {
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    .text-block {
+        text-align: center;
+    }
+
+    .text-block h2 {
+        font-size: 2rem;
+    }
+
+    .text-block p {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .cta-logo-wrapper {
+        flex: 0 0 auto;
+        width: 120px;
+    }
+
+    /* Hide Ripple on mobile to prevent overflow issues */
+    .ripple-effect {
+        display: none;
     }
 }
