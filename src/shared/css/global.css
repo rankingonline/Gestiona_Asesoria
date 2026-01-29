@@ -498,7 +498,7 @@ p {
 
 @media (max-width: 768px) {
     .contact-box {
-        padding: 1.5rem;
+        padding: 0.75rem;
     }
 }
 
@@ -514,6 +514,8 @@ p {
 .form-group input,
 .form-group textarea {
     width: 100%;
+    box-sizing: border-box;
+    /* Ensure padding doesn't add to width */
     padding: 1rem;
     background: white;
     border: 1px solid var(--border);
