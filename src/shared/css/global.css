@@ -22,11 +22,21 @@ html {
     background-color: var(--bg-light);
     color: var(--text-main);
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body {
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+#app {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
 }
 
 /* Utilities */
@@ -438,9 +448,27 @@ p {
     transition-delay: 0.4s;
 }
 
-.mobile-nav a:not(.btn):hover {
+.mobile-nav a:not(.btn):hover,
+.mobile-nav a.active {
     color: var(--primary);
     transform: scale(1.05);
+    /* Optional: keep scale if desired, or remove for active */
+}
+
+.mobile-nav a.active {
+    position: relative;
+    transform: scale(1);
+    /* Reset scale for active if preferred, or keep it */
+}
+
+.mobile-nav a.active::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--primary);
+    margin: 5px auto 0;
+    border-radius: 2px;
 }
 
 .mobile-nav .btn {
