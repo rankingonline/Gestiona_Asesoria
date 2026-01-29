@@ -179,16 +179,41 @@
     .fiscal-hero-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
+        text-align: center;
     }
 
     .fiscal-hero h1 {
         font-size: 2.5rem;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .fiscal-hero .lead {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-text-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tag-holder.left-align {
+        justify-content: center;
+    }
+
+    .hero-cta-wrapper.left-align {
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     .hero-group-image {
         aspect-ratio: 16/9;
     }
-
 }
 
 /* Fiscal Points Section */
@@ -724,11 +749,25 @@
 }
 
 @media (max-width: 900px) {
+    .services-main-intro {
+        padding: 2rem 1rem;
+        /* Significantly reduced horizontal padding */
+    }
 
-    .fiscal-services-grid,
+    .fiscal-services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
     .services-cards-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+    }
+
+    .fiscal-card {
+        padding: 1.5rem;
+        /* Slightly reduced padding inside cards */
     }
 }
 
