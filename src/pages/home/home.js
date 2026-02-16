@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 autoAlpha: 0,
                 duration: 0.8,
                 stagger: 0.1,
-                clearProps: "all" 
+                clearProps: "all"
             }, "-=0.6")
             .from(".trust-indicators-row", {
                 opacity: 0,
@@ -88,5 +88,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 gsap.to(".card-main", { rotationY: x * 0.5, rotationX: -y * 0.5, duration: 1, ease: "power2.out" });
             });
         }
+    }
+    // Scroll Reveal Video Logic
+    const scrollVideos = document.querySelectorAll('.scroll-reveal-video');
+    if (scrollVideos.length > 0) {
+        const videoObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.play().catch(e => console.log('Autoplay prevented:', e));
+                } else {
+                    entry.target.pause();
+                }
+            });
+        }, { threshold: 0.25 });
+
+        scrollVideos.forEach(video => videoObserver.observe(video));
     }
 });

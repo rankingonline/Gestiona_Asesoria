@@ -129,10 +129,8 @@
       <div class="hero-visual-impact">
         <div class="visual-card-stack">
           <div class="card-main">
-            <div class="placeholder-bg"
-              style="width: 100%; height: 100%; min-height: 400px; background-color: #f0f0f0; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #888;">
-              <p>Imagen Hero</p>
-            </div>
+            <video src="../../../public/images/home/video-hero.mp4" autoplay loop muted playsinline
+              style="width: 100%; height: 100%; min-height: 400px; object-fit: cover; border-radius: 12px; pointer-events: none;"></video>
           </div>
           <!-- Floating Stats Card -->
           <div class="float-stat glass-panel">
@@ -212,7 +210,8 @@
             </div>
             <div class="checkbox-group">
               <input type="checkbox" id="privacy-policy-home" required />
-              <label for="privacy-policy-home">He leído y acepto la <a href="https://gestionarme.es/politica-de-privacidad/">política
+              <label for="privacy-policy-home">He leído y acepto la <a
+                  href="https://gestionarme.es/politica-de-privacidad/">política
                   de
                   privacidad</a></label>
             </div>
@@ -345,11 +344,11 @@
       <div class="split-layout">
         <!-- Image Left -->
         <div class="image-content">
-          <div class="image-wrapper rounded-shadow">
-            <div class="placeholder-bg"
-              style="width: 100%; height: 400px; background-color: #f0f0f0; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #888;">
-              <p>Imagen Equipo</p>
-            </div>
+          <div class="image-wrapper rounded-shadow focus-video-bg">
+            <video class="scroll-reveal-video" muted loop playsinline
+              style="width: 100%; height: 400px; object-fit: cover; mix-blend-mode: screen; pointer-events: none;">
+              <source src="../../../public/images/home/Stencil Logo.mp4" type="video/mp4">
+            </video>
           </div>
         </div>
 
@@ -602,7 +601,8 @@
           </div>
           <div class="checkbox-group">
             <input type="checkbox" id="privacy-policy-home" required />
-            <label for="privacy-policy-home">He leído y acepto la <a href="https://gestionarme.es/politica-de-privacidad/">política
+            <label for="privacy-policy-home">He leído y acepto la <a
+                href="https://gestionarme.es/politica-de-privacidad/">política
                 de privacidad</a></label>
           </div>
           <button type="submit" class="btn btn-primary full-width">Agenda una reunión</button>

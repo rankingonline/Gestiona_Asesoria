@@ -9,7 +9,7 @@
     /* Light Theme */
     color: #1e293b;
     overflow: hidden;
-    min-height: 90vh;
+    min-height: 70vh;
     display: flex;
     align-items: center;
 }
@@ -616,6 +616,29 @@
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.focus-video-bg {
+    background: linear-gradient(-45deg, #ef733d, #c95422, #e67646, #f05a1a);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes zoomInOut {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.scroll-reveal-video {
+    animation: zoomInOut 15s ease-in-out infinite;
+    mix-blend-mode: screen;
 }
 
 .focus-section .img-responsive {
